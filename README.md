@@ -12,8 +12,6 @@ Java idiomatic client for [Cloud Asset][api-reference].
 > make backwards-incompatible changes.
 
 ## Quickstart
-
-[//]: # ({x-version-update-start:google-cloud-asset:released})
 If you are using Maven with Bom, Add this to your pom.xml file.
 ```xml
 <dependencyManagement>
@@ -33,6 +31,7 @@ If you are using Maven with Bom, Add this to your pom.xml file.
   <artifactId>google-cloud-asset</artifactId>
 </dependency>
 ```
+[//]: # ({x-version-update-start:google-cloud-asset:released})
 If you are using Maven without Bom, Add this to your dependencies.
 ```xml
 <dependency>
