@@ -41,6 +41,7 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
   private Asset() {
     name_ = "";
     assetType_ = "";
+    ancestors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -110,6 +111,16 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
 
               break;
             }
+          case 82:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                ancestors_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              ancestors_.add(s);
+              break;
+            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -124,6 +135,9 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+        ancestors_ = ancestors_.getUnmodifiableView();
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -143,6 +157,7 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
             com.google.cloud.asset.v1.Asset.class, com.google.cloud.asset.v1.Asset.Builder.class);
   }
 
+  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
@@ -318,6 +333,73 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
     return getIamPolicy();
   }
 
+  public static final int ANCESTORS_FIELD_NUMBER = 10;
+  private com.google.protobuf.LazyStringList ancestors_;
+  /**
+   *
+   *
+   * <pre>
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+   * represented as a list of relative resource names. Ancestry path starts with
+   * the closest CRM ancestor and ends at root. If the asset is a CRM
+   * project/folder/organization, this starts from the asset itself.
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * </pre>
+   *
+   * <code>repeated string ancestors = 10;</code>
+   */
+  public com.google.protobuf.ProtocolStringList getAncestorsList() {
+    return ancestors_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+   * represented as a list of relative resource names. Ancestry path starts with
+   * the closest CRM ancestor and ends at root. If the asset is a CRM
+   * project/folder/organization, this starts from the asset itself.
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * </pre>
+   *
+   * <code>repeated string ancestors = 10;</code>
+   */
+  public int getAncestorsCount() {
+    return ancestors_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+   * represented as a list of relative resource names. Ancestry path starts with
+   * the closest CRM ancestor and ends at root. If the asset is a CRM
+   * project/folder/organization, this starts from the asset itself.
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * </pre>
+   *
+   * <code>repeated string ancestors = 10;</code>
+   */
+  public java.lang.String getAncestors(int index) {
+    return ancestors_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+   * represented as a list of relative resource names. Ancestry path starts with
+   * the closest CRM ancestor and ends at root. If the asset is a CRM
+   * project/folder/organization, this starts from the asset itself.
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * </pre>
+   *
+   * <code>repeated string ancestors = 10;</code>
+   */
+  public com.google.protobuf.ByteString getAncestorsBytes(int index) {
+    return ancestors_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -344,6 +426,9 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
     if (iamPolicy_ != null) {
       output.writeMessage(4, getIamPolicy());
     }
+    for (int i = 0; i < ancestors_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, ancestors_.getRaw(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -364,6 +449,14 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
     }
     if (iamPolicy_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getIamPolicy());
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < ancestors_.size(); i++) {
+        dataSize += computeStringSizeNoTag(ancestors_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getAncestorsList().size();
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -390,6 +483,7 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
     if (hasIamPolicy()) {
       if (!getIamPolicy().equals(other.getIamPolicy())) return false;
     }
+    if (!getAncestorsList().equals(other.getAncestorsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -412,6 +506,10 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
     if (hasIamPolicy()) {
       hash = (37 * hash) + IAM_POLICY_FIELD_NUMBER;
       hash = (53 * hash) + getIamPolicy().hashCode();
+    }
+    if (getAncestorsCount() > 0) {
+      hash = (37 * hash) + ANCESTORS_FIELD_NUMBER;
+      hash = (53 * hash) + getAncestorsList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -573,6 +671,8 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
         iamPolicy_ = null;
         iamPolicyBuilder_ = null;
       }
+      ancestors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -599,6 +699,8 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public com.google.cloud.asset.v1.Asset buildPartial() {
       com.google.cloud.asset.v1.Asset result = new com.google.cloud.asset.v1.Asset(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.name_ = name_;
       result.assetType_ = assetType_;
       if (resourceBuilder_ == null) {
@@ -611,6 +713,12 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.iamPolicy_ = iamPolicyBuilder_.build();
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        ancestors_ = ancestors_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.ancestors_ = ancestors_;
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -674,6 +782,16 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
       if (other.hasIamPolicy()) {
         mergeIamPolicy(other.getIamPolicy());
       }
+      if (!other.ancestors_.isEmpty()) {
+        if (ancestors_.isEmpty()) {
+          ancestors_ = other.ancestors_;
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          ensureAncestorsIsMutable();
+          ancestors_.addAll(other.ancestors_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -702,6 +820,8 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
+    private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
@@ -1274,6 +1394,185 @@ public final class Asset extends com.google.protobuf.GeneratedMessageV3
         iamPolicy_ = null;
       }
       return iamPolicyBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringList ancestors_ =
+        com.google.protobuf.LazyStringArrayList.EMPTY;
+
+    private void ensureAncestorsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        ancestors_ = new com.google.protobuf.LazyStringArrayList(ancestors_);
+        bitField0_ |= 0x00000010;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+     * represented as a list of relative resource names. Ancestry path starts with
+     * the closest CRM ancestor and ends at root. If the asset is a CRM
+     * project/folder/organization, this starts from the asset itself.
+     * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+     * </pre>
+     *
+     * <code>repeated string ancestors = 10;</code>
+     */
+    public com.google.protobuf.ProtocolStringList getAncestorsList() {
+      return ancestors_.getUnmodifiableView();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+     * represented as a list of relative resource names. Ancestry path starts with
+     * the closest CRM ancestor and ends at root. If the asset is a CRM
+     * project/folder/organization, this starts from the asset itself.
+     * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+     * </pre>
+     *
+     * <code>repeated string ancestors = 10;</code>
+     */
+    public int getAncestorsCount() {
+      return ancestors_.size();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+     * represented as a list of relative resource names. Ancestry path starts with
+     * the closest CRM ancestor and ends at root. If the asset is a CRM
+     * project/folder/organization, this starts from the asset itself.
+     * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+     * </pre>
+     *
+     * <code>repeated string ancestors = 10;</code>
+     */
+    public java.lang.String getAncestors(int index) {
+      return ancestors_.get(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+     * represented as a list of relative resource names. Ancestry path starts with
+     * the closest CRM ancestor and ends at root. If the asset is a CRM
+     * project/folder/organization, this starts from the asset itself.
+     * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+     * </pre>
+     *
+     * <code>repeated string ancestors = 10;</code>
+     */
+    public com.google.protobuf.ByteString getAncestorsBytes(int index) {
+      return ancestors_.getByteString(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+     * represented as a list of relative resource names. Ancestry path starts with
+     * the closest CRM ancestor and ends at root. If the asset is a CRM
+     * project/folder/organization, this starts from the asset itself.
+     * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+     * </pre>
+     *
+     * <code>repeated string ancestors = 10;</code>
+     */
+    public Builder setAncestors(int index, java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureAncestorsIsMutable();
+      ancestors_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+     * represented as a list of relative resource names. Ancestry path starts with
+     * the closest CRM ancestor and ends at root. If the asset is a CRM
+     * project/folder/organization, this starts from the asset itself.
+     * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+     * </pre>
+     *
+     * <code>repeated string ancestors = 10;</code>
+     */
+    public Builder addAncestors(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureAncestorsIsMutable();
+      ancestors_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+     * represented as a list of relative resource names. Ancestry path starts with
+     * the closest CRM ancestor and ends at root. If the asset is a CRM
+     * project/folder/organization, this starts from the asset itself.
+     * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+     * </pre>
+     *
+     * <code>repeated string ancestors = 10;</code>
+     */
+    public Builder addAllAncestors(java.lang.Iterable<java.lang.String> values) {
+      ensureAncestorsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(values, ancestors_);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+     * represented as a list of relative resource names. Ancestry path starts with
+     * the closest CRM ancestor and ends at root. If the asset is a CRM
+     * project/folder/organization, this starts from the asset itself.
+     * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+     * </pre>
+     *
+     * <code>repeated string ancestors = 10;</code>
+     */
+    public Builder clearAncestors() {
+      ancestors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+     * represented as a list of relative resource names. Ancestry path starts with
+     * the closest CRM ancestor and ends at root. If the asset is a CRM
+     * project/folder/organization, this starts from the asset itself.
+     * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+     * </pre>
+     *
+     * <code>repeated string ancestors = 10;</code>
+     */
+    public Builder addAncestorsBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+      ensureAncestorsIsMutable();
+      ancestors_.add(value);
+      onChanged();
+      return this;
     }
 
     @java.lang.Override

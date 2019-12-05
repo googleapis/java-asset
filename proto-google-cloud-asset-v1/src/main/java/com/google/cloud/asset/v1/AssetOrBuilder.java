@@ -137,4 +137,61 @@ public interface AssetOrBuilder
    * <code>.google.iam.v1.Policy iam_policy = 4;</code>
    */
   com.google.iam.v1.PolicyOrBuilder getIamPolicyOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+   * represented as a list of relative resource names. Ancestry path starts with
+   * the closest CRM ancestor and ends at root. If the asset is a CRM
+   * project/folder/organization, this starts from the asset itself.
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * </pre>
+   *
+   * <code>repeated string ancestors = 10;</code>
+   */
+  java.util.List<java.lang.String> getAncestorsList();
+  /**
+   *
+   *
+   * <pre>
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+   * represented as a list of relative resource names. Ancestry path starts with
+   * the closest CRM ancestor and ends at root. If the asset is a CRM
+   * project/folder/organization, this starts from the asset itself.
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * </pre>
+   *
+   * <code>repeated string ancestors = 10;</code>
+   */
+  int getAncestorsCount();
+  /**
+   *
+   *
+   * <pre>
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+   * represented as a list of relative resource names. Ancestry path starts with
+   * the closest CRM ancestor and ends at root. If the asset is a CRM
+   * project/folder/organization, this starts from the asset itself.
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * </pre>
+   *
+   * <code>repeated string ancestors = 10;</code>
+   */
+  java.lang.String getAncestors(int index);
+  /**
+   *
+   *
+   * <pre>
+   * Asset's ancestry path in Cloud Resource Manager (CRM) hierarchy,
+   * represented as a list of relative resource names. Ancestry path starts with
+   * the closest CRM ancestor and ends at root. If the asset is a CRM
+   * project/folder/organization, this starts from the asset itself.
+   * Example: ["projects/123456789", "folders/5432", "organizations/1234"]
+   * </pre>
+   *
+   * <code>repeated string ancestors = 10;</code>
+   */
+  com.google.protobuf.ByteString getAncestorsBytes(int index);
 }
