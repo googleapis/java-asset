@@ -1,5 +1,14 @@
 # Changelog
 
+### [0.115.1](https://www.github.com/googleapis/java-asset/compare/v0.115.0...v0.115.1) (2019-12-12)
+
+
+### Dependencies
+
+* update dependency com.google.protobuf:protobuf-java to v3.11.1 ([#32](https://www.github.com/googleapis/java-asset/issues/32)) ([8ec47c9](https://www.github.com/googleapis/java-asset/commit/8ec47c9fa69bfa35d4f4b58260c5b61462c5614e))
+* update gax.version to v1.50.1 ([#19](https://www.github.com/googleapis/java-asset/issues/19)) ([bcf374c](https://www.github.com/googleapis/java-asset/commit/bcf374c3d0328c7640602dec1b7fd62ee18852d9))
+* update gax.version to v1.51.0 ([#33](https://www.github.com/googleapis/java-asset/issues/33)) ([e07aacf](https://www.github.com/googleapis/java-asset/commit/e07aacf0f9cd9e06ddb703ee15467b803c1c9126))
+
 ## [0.115.0](https://www.github.com/googleapis/java-asset/compare/0.114.0...v0.115.0) (2019-10-22)
 
 
