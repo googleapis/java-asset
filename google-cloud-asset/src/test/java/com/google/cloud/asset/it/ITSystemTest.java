@@ -52,7 +52,7 @@ public class ITSystemTest {
   private static TopicAdminClient topicAdminClient;
   private static Feed feed;
   private static String feedName;
-  private static String formatFeedName;
+  private static String formattedFeedName;
 
   @BeforeClass
   public static void setUp() throws IOException {
@@ -76,7 +76,7 @@ public class ITSystemTest {
             .build();
     feed = assetServiceClient.createFeed(request);
     feedName = getName(feed.getName());
-    formatFeedName = FeedName.of(getProjectNumber(PROJECT_ID), feedName).toString();
+    formattedFeedName = FeedName.of(getProjectNumber(PROJECT_ID), feedName).toString();
   }
 
   @AfterClass
@@ -85,14 +85,15 @@ public class ITSystemTest {
     topicAdminClient.deleteTopic(TOPIC_NAME);
 
     /* delete feed */
-    DeleteFeedRequest feedRequest = DeleteFeedRequest.newBuilder().setName(formatFeedName).build();
+    DeleteFeedRequest feedRequest =
+        DeleteFeedRequest.newBuilder().setName(formattedFeedName).build();
     assetServiceClient.deleteFeed(feedRequest);
     assetServiceClient.close();
   }
 
   @Test
   public void getFeedTest() {
-    GetFeedRequest request = GetFeedRequest.newBuilder().setName(formatFeedName).build();
+    GetFeedRequest request = GetFeedRequest.newBuilder().setName(formattedFeedName).build();
     Feed actualFeed = assetServiceClient.getFeed(request);
     assertEquals(feed.getName(), actualFeed.getName());
     assertEquals(feed.getAssetNamesList(), actualFeed.getAssetNamesList());
