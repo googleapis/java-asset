@@ -113,7 +113,7 @@ and the public API should not be considered stable.
 
 Contributions to this library are always welcome and highly encouraged.
 
-See [CONTRIBUTING][contributing] for more information how to get started
+See [CONTRIBUTING][contributing] for more information how to get started.
 
 Please note that this project is released with a Contributor Code of Conduct. By participating in
 this project you agree to abide by its terms. See [Code of Conduct][code-of-conduct] for more
@@ -135,7 +135,7 @@ Java 11 | [![Kokoro CI][kokoro-badge-image-5]][kokoro-badge-link-5]
 
 [api-reference]: https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview
 [product-docs]: https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview
-[javadocs]: https://googleapis.dev/java/java-asset/latest/index.html
+[javadocs]: https://googleapis.dev/java/google-cloud-asset/latest/index.html
 [kokoro-badge-image-1]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-asset/java7.svg
 [kokoro-badge-link-1]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-asset/java7.html
 [kokoro-badge-image-2]: http://storage.googleapis.com/cloud-devrel-public/java/badges/java-asset/java8.svg
