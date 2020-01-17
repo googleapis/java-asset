@@ -13,7 +13,7 @@ Java idiomatic client for [Cloud Asset Inventory][product-docs].
 
 ## Quickstart
 
-If you are using Maven, add this to your pom.xml file
+If you are using Maven with BOM, add this to your pom.xml file
 ```xml
 <dependencyManagement>
   <dependencies>
@@ -36,6 +36,16 @@ If you are using Maven, add this to your pom.xml file
 ```
 
 [//]: # ({x-version-update-start:google-cloud-asset:released})
+
+If you are using Maven with BOM, add this to your dependencies:
+
+```xml
+<dependency>
+  <groupId>com.google.cloud</groupId>
+  <artifactId>google-cloud-asset</artifactId>
+  <version>0.116.1-beta</version>
+</dependency>
+```
 
 If you are using Gradle, add this to your dependencies
 ```Groovy
