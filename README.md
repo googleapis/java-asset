@@ -1,6 +1,6 @@
-# Google Cloud Asset Client for Java
+# Google Cloud Asset Inventory Client for Java
 
-Java idiomatic client for [Cloud Asset][product-docs].
+Java idiomatic client for [Cloud Asset Inventory][product-docs].
 
 [![Maven][maven-version-image]][maven-version-link]
 ![Stability][stability-image]
@@ -55,8 +55,8 @@ See the [Authentication][authentication] section in the base directory's README.
 
 ### Prerequisites
 
-You will need a [Google Cloud Platform Console][developer-console] project with the Cloud Asset [API enabled][enable-api].
-You will need to [enable billing][enable-billing] to use Google Cloud Asset
+You will need a [Google Cloud Platform Console][developer-console] project with the Cloud Asset Inventory [API enabled][enable-api].
+You will need to [enable billing][enable-billing] to use Google Cloud Asset Inventory
 [Follow these instructions][create-project] to get your project set up. You will also need to set up the local development environment by
 [installing the Google Cloud SDK][cloud-sdk] and running the following commands in command line:
 `gcloud auth login` and `gcloud config set project [YOUR PROJECT ID]`.
@@ -66,13 +66,13 @@ You will need to [enable billing][enable-billing] to use Google Cloud Asset
 You'll need to obtain the `google-cloud-asset` library.  See the [Quickstart](#quickstart) section
 to add `google-cloud-asset` as a dependency in your code.
 
-## About Cloud Asset
+## About Cloud Asset Inventory
 
 
-[Cloud Asset][product-docs] is Cloud Asset Inventory provides inventory services based on a time series database. This database keeps a five week history of Google Cloud asset metadata. The Cloud Asset Inventory export service allows you to export all asset metadata at a certain timestamp or export event change history during a timeframe.
+[Cloud Asset Inventory][product-docs] provides inventory services based on a time series database. This database keeps a five week history of Google Cloud asset metadata. The Cloud Asset Inventory export service allows you to export all asset metadata at a certain timestamp or export event change history during a timeframe.
 
-See the [Cloud Asset client library docs][javadocs] to learn how to
-use this Cloud Asset Client Library.
+See the [Cloud Asset Inventory client library docs][javadocs] to learn how to
+use this Cloud Asset Inventory Client Library.
 
 
 
@@ -83,7 +83,7 @@ To get help, follow the instructions in the [shared Troubleshooting document][tr
 
 ## Transport
 
-Cloud Asset uses gRPC for the transport layer.
+Cloud Asset Inventory uses gRPC for the transport layer.
 
 ## Java Versions
 
