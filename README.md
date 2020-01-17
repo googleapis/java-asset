@@ -13,7 +13,7 @@ Java idiomatic client for [Cloud Asset Inventory][product-docs].
 
 ## Quickstart
 
-If you are using Maven with BOM, add this to your pom.xml file
+If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
 ```xml
 <dependencyManagement>
   <dependencies>
@@ -37,7 +37,7 @@ If you are using Maven with BOM, add this to your pom.xml file
 
 [//]: # ({x-version-update-start:google-cloud-asset:released})
 
-If you are using Maven with BOM, add this to your dependencies:
+If you are using Maven without BOM, add this to your dependencies:
 
 ```xml
 <dependency>
@@ -159,3 +159,4 @@ Java 11 | [![Kokoro CI][kokoro-badge-image-5]][kokoro-badge-link-5]
 [license]: https://github.com/googleapis/java-asset/blob/master/LICENSE
 [enable-billing]: https://cloud.google.com/apis/docs/getting-started#enabling_billing
 [enable-api]: https://console.cloud.google.com/flows/enableapi?apiid=cloudasset.googleapis.com
+[libraries-bom]: https://github.com/GoogleCloudPlatform/cloud-opensource-java/wiki/The-Google-Cloud-Platform-Libraries-BOM
