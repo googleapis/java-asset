@@ -1,5 +1,5 @@
 {
-  "updateTime": "2020-01-22T20:55:06.843121Z",
+  "updateTime": "2020-01-23T08:33:58.499993Z",
   "sources": [
     {
       "generator": {
@@ -473,7 +473,7 @@
       "path": "proto-google-cloud-asset-v1/src/main/java/com/google/cloud/asset/v1/GcsDestination.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1/src/main/java/com/google/cloud/asset/v1/GcsDestinationOrBuilder.java"
+      "path": "proto-google-cloud-asset-v1/src/main/java/com/google/cloud/asset/v1/ExportAssetsResponse.java"
     },
     {
       "path": "proto-google-cloud-asset-v1/src/main/java/com/google/cloud/asset/v1/GetFeedRequest.java"
@@ -516,9 +516,10 @@
     },
     {
       "path": "proto-google-cloud-asset-v1/src/main/java/com/google/cloud/asset/v1/TemporalAsset.java"
+
     },
     {
-      "path": "proto-google-cloud-asset-v1/src/main/java/com/google/cloud/asset/v1/TemporalAssetOrBuilder.java"
+      "path": "proto-google-cloud-asset-v1/src/main/java/com/google/cloud/asset/v1/ListFeedsResponseOrBuilder.java"
     },
     {
       "path": "proto-google-cloud-asset-v1/src/main/java/com/google/cloud/asset/v1/TimeWindow.java"
@@ -572,7 +573,7 @@
       "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/ExportAssetsRequestOrBuilder.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/ExportAssetsResponse.java"
+      "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/AssetOrBuilder.java"
     },
     {
       "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/ExportAssetsResponseOrBuilder.java"
@@ -593,7 +594,7 @@
       "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/ProjectName.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/Resource.java"
+      "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/BatchGetAssetsHistoryRequestOrBuilder.java"
     },
     {
       "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/ResourceOrBuilder.java"
@@ -605,10 +606,10 @@
       "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/TemporalAssetOrBuilder.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/TimeWindow.java"
+      "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/ContentType.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/TimeWindowOrBuilder.java"
+      "path": "proto-google-cloud-asset-v1beta1/src/main/java/com/google/cloud/asset/v1beta1/ExportAssetsRequest.java"
     },
     {
       "path": "proto-google-cloud-asset-v1beta1/src/main/proto/google/cloud/asset/v1beta1/asset_service.proto"
@@ -695,7 +696,7 @@
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/AssetOrBuilder.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/AssetProto.java"
+      "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/BatchGetAssetsHistoryResponse.java"
     },
     {
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/AssetServiceProto.java"
@@ -713,7 +714,10 @@
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/BatchGetAssetsHistoryResponseOrBuilder.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/BigQueryDestination.java"
+      "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/ContentType.java"
+    },
+    {
+      "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/CreateFeedRequest.java"
     },
     {
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/BigQueryDestinationOrBuilder.java"
@@ -746,7 +750,7 @@
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/ExportAssetsResponseOrBuilder.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/Feed.java"
+      "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/FeedOutputConfig.java"
     },
     {
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/FeedName.java"
@@ -782,7 +786,7 @@
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/ListFeedsResponse.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/ListFeedsResponseOrBuilder.java"
+      "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/PubsubDestinationOrBuilder.java"
     },
     {
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/OutputConfig.java"
@@ -821,7 +825,7 @@
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/java/com/google/cloud/asset/v1p2beta1/UpdateFeedRequestOrBuilder.java"
     },
     {
-      "path": "proto-google-cloud-asset-v1p2beta1/src/main/proto/google/cloud/asset/v1p2beta1/asset_service.proto"
+      "path": "synth.py"
     },
     {
       "path": "proto-google-cloud-asset-v1p2beta1/src/main/proto/google/cloud/asset/v1p2beta1/assets.proto"
