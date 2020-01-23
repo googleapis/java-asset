@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.116.2](https://www.github.com/googleapis/java-asset/compare/v0.116.1...v0.116.2) (2020-01-23)
+
+
+### Dependencies
+
+* update dependency org.threeten:threetenbp to v1.4.1 ([#62](https://www.github.com/googleapis/java-asset/issues/62)) ([4e564ee](https://www.github.com/googleapis/java-asset/commit/4e564ee2001bc2b6321ac6c1f87cc5dd5aefdb8f))
+
 ### [0.116.1](https://www.github.com/googleapis/java-asset/compare/v0.116.0...v0.116.1) (2020-01-08)
 
 
