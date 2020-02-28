@@ -1,5 +1,14 @@
 # Changelog
 
+### [0.118.1](https://www.github.com/googleapis/java-asset/compare/v0.118.0...v0.118.1) (2020-02-28)
+
+
+### Dependencies
+
+* update core dependencies ([#82](https://www.github.com/googleapis/java-asset/issues/82)) ([148b506](https://www.github.com/googleapis/java-asset/commit/148b506746a3a9b104277f314023f7882d86da0b))
+* update core dependencies ([#88](https://www.github.com/googleapis/java-asset/issues/88)) ([984bc16](https://www.github.com/googleapis/java-asset/commit/984bc16b04b432648bd43309d265bdcf21a72119))
+* update dependency com.google.protobuf:protobuf-java to v3.11.4 ([#84](https://www.github.com/googleapis/java-asset/issues/84)) ([1a8f0fb](https://www.github.com/googleapis/java-asset/commit/1a8f0fb40c3ea0ddd3592041cb79c15fc1edb2c8))
+
 ## [0.118.0](https://www.github.com/googleapis/java-asset/compare/v0.117.0...v0.118.0) (2020-02-05)
 
 
