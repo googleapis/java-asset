@@ -1,5 +1,5 @@
 {
-  "updateTime": "2020-03-16T16:37:41.034665Z",
+  "updateTime": "2020-03-16T17:55:17.191423Z",
   "sources": [
     {
       "generator": {
@@ -28,7 +28,7 @@
       "template": {
         "name": "java_library",
         "origin": "synthtool.gcp",
-        "version": "2020.2.4"
+        "version": "0.0.0+dev"
       }
     }
   ],
