@@ -12,24 +12,23 @@ Java idiomatic client for [Cloud Asset Inventory][product-docs].
 
 If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
 ```xml
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.google.cloud</groupId>
-        <artifactId>libraries-bom</artifactId>
-        <version>4.2.0</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
+<dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>com.google.cloud</groupId>
-      <artifactId>google-cloud-asset</artifactId>
+      <artifactId>libraries-bom</artifactId>
+      <version>4.2.0</version>
+      <type>pom</type>
+      <scope>import</scope>
     </dependency>
-
+  </dependencies>
+</dependencyManagement>
+<dependencies>
+  <dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-asset</artifactId>
+  </dependency>
+</dependencies>
 ```
 
 [//]: # ({x-version-update-start:google-cloud-asset:released})
@@ -37,27 +36,11 @@ If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
 If you are using Maven without BOM, add this to your dependencies:
 
 ```xml
-    <dependency>
-      <groupId>com.google.cloud</groupId>
-      <artifactId>google-cloud-asset</artifactId>
-      <version>1.1.0</version>
-    </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.google.truth</groupId>
-      <artifactId>truth</artifactId>
-      <version>1.0.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-</project>
-
+<dependency>
+  <groupId>com.google.cloud</groupId>
+  <artifactId>google-cloud-asset</artifactId>
+  <version>1.1.0</version>
+</dependency>
 ```
 
 If you are using Gradle, add this to your dependencies
