@@ -1,11 +1,11 @@
 {
-  "updateTime": "2020-03-16T16:37:41.034665Z",
+  "updateTime": "2020-03-18T21:43:13.199475Z",
   "sources": [
     {
       "generator": {
         "name": "artman",
-        "version": "1.1.0",
-        "dockerImage": "googleapis/artman@sha256:f54b7644a1d2e7a37b23f5c0dfe9bba473e41c675002a507a244389e27487ca9"
+        "version": "1.1.1",
+        "dockerImage": "googleapis/artman@sha256:5ef340c8d9334719bc5c6981d95f4a5d2737b0a6a24f2b9a0d430e96fff85c5b"
       }
     },
     {
@@ -25,10 +25,10 @@
       }
     },
     {
-      "template": {
-        "name": "java_library",
-        "origin": "synthtool.gcp",
-        "version": "2020.2.4"
+      "git": {
+        "name": "synthtool",
+        "remote": "https://github.com/googleapis/synthtool.git",
+        "sha": "1326d00fa9e856aa6b244b6811404cf45b109119"
       }
     }
   ],
