@@ -1,6 +1,13 @@
 {
-  "updateTime": "2020-04-06T21:54:08.093158Z",
+  "updateTime": "2020-04-08T21:53:12.696182Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/java-asset.git",
+        "sha": "864fe34342b16865a555f8f27091fd18a3bbc11c"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
