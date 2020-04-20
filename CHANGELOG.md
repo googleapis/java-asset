@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.1](https://www.github.com/googleapis/java-asset/compare/v1.2.0...v1.2.1) (2020-04-20)
+
+
+### Dependencies
+
+* update dependency com.google.guava:guava-bom to v29 ([#145](https://www.github.com/googleapis/java-asset/issues/145)) ([77d7de5](https://www.github.com/googleapis/java-asset/commit/77d7de54fda57cee74cd8ac19a1af99693723e54))
+
 ## [1.2.0](https://www.github.com/googleapis/java-asset/compare/v1.1.0...v1.2.0) (2020-04-07)
 
 
