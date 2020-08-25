@@ -48,11 +48,11 @@ If you are using Maven without BOM, add this to your dependencies:
 
 If you are using Gradle, add this to your dependencies
 ```Groovy
-compile 'com.google.cloud:google-cloud-asset:1.7.0'
+compile 'com.google.cloud:google-cloud-asset:1.5.2'
 ```
 If you are using SBT, add this to your dependencies
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-asset" % "1.7.0"
+libraryDependencies += "com.google.cloud" % "google-cloud-asset" % "1.5.2"
 ```
 [//]: # ({x-version-update-end})
 
@@ -100,6 +100,7 @@ has instructions for running the samples.
 | Export Assets Bigquery Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/ExportAssetsBigqueryExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ExportAssetsBigqueryExample.java) |
 | Export Assets Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/ExportAssetsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ExportAssetsExample.java) |
 | Get Feed Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/GetFeedExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/GetFeedExample.java) |
+| List Assets Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/ListAssetsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ListAssetsExample.java) |
 | List Feeds Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/ListFeedsExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/ListFeedsExample.java) |
 | Search All Iam Policies Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/SearchAllIamPoliciesExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/SearchAllIamPoliciesExample.java) |
 | Search All Resources Example | [source code](https://github.com/googleapis/java-asset/blob/master/samples/snippets/src/main/java/com/example/asset/SearchAllResourcesExample.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-asset&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/asset/SearchAllResourcesExample.java) |
