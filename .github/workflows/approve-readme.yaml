@@ -30,16 +30,16 @@ jobs:
               return;
             }
 
-            // approve release PR
+            // approve README regeneration PR
             await github.pulls.createReview({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Rubber stamped release!',
+              body: 'Rubber stamped PR!',
               pull_number: context.payload.pull_request.number,
               event: 'APPROVE'
             });
 
-            // attach kokoro:force-run and automerge labels
+            // attach automerge label
             await github.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
