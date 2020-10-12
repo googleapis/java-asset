@@ -120,7 +120,9 @@ public class AssetServiceClient implements BackgroundResource {
    * Constructs an instance of AssetServiceClient, using the given settings. The channels are
    * created based on the settings passed in, or defaults for any settings that are not set.
    */
-  public static final AssetServiceClient create(AssetServiceSettings settings) throws IOException {
+  public static final AssetServiceClient create(
+      AssetServiceSettings settings
+  ) throws IOException {
     return new AssetServiceClient(settings);
   }
 
@@ -142,6 +144,9 @@ public class AssetServiceClient implements BackgroundResource {
     this.settings = settings;
     this.stub = ((AssetServiceStubSettings) settings.getStubSettings()).createStub();
     this.operationsClient = OperationsClient.create(this.stub.getOperationsStub());
+  }
+  public static void foo() {
+    return;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
