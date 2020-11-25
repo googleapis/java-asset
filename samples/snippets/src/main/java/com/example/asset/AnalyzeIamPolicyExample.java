@@ -17,34 +17,35 @@
 package com.example.asset;
 
 // [START asset_quickstart_analyze_iam_policy]
-import com.google.api.gax.rpc.ApiException;
-import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.cloud.asset.v1.AnalyzeIamPolicyRequest;
 import com.google.cloud.asset.v1.AnalyzeIamPolicyResponse;
 import com.google.cloud.asset.v1.AssetServiceClient;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery.Options;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery.ResourceSelector;
-import java.io.IOException;
 
 public class AnalyzeIamPolicyExample {
 
+  public static void main(String[] args) throws Exception {
+    // TODO(developer): Replace these variables before running the sample.
+    String scope = "projects/<my-project-id>";
+    String fullResourceName = "//cloudresourcemanager.googleapis.com/projects/<<my-project-id>>";
+    analyzeIamPolicy(scope, fullResourceName);
+  }
+
   // Analyzes accessible IAM policies that match a request.
-  public static void analyzeIamPolicy(String scope, String fullResourceName) {
-    AnalyzeIamPolicyRequest request =
-        AnalyzeIamPolicyRequest.newBuilder()
-            .setAnalysisQuery(
-                IamPolicyAnalysisQuery.newBuilder()
-                    .setScope(scope)
-                    .setResourceSelector(
-                        ResourceSelector.newBuilder().setFullResourceName(fullResourceName).build())
-                    .setOptions(
-                        Options.newBuilder()
-                            .setExpandGroups(true)
-                            .setOutputGroupEdges(true)
-                            .build())
-                    .build())
+  public static void analyzeIamPolicy(String scope, String fullResourceName) throws Exception {
+    ResourceSelector resourceSelector =
+        ResourceSelector.newBuilder().setFullResourceName(fullResourceName).build();
+    Options options = Options.newBuilder().setExpandGroups(true).setOutputGroupEdges(true).build();
+    IamPolicyAnalysisQuery query =
+        IamPolicyAnalysisQuery.newBuilder()
+            .setScope(scope)
+            .setResourceSelector(resourceSelector)
+            .setOptions(options)
             .build();
+    AnalyzeIamPolicyRequest request =
+        AnalyzeIamPolicyRequest.newBuilder().setAnalysisQuery(query).build();
 
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests. After completing all of your requests, call
@@ -52,12 +53,6 @@ public class AnalyzeIamPolicyExample {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       AnalyzeIamPolicyResponse response = client.analyzeIamPolicy(request);
       System.out.println("Analyze completed successfully:\n" + response);
-    } catch (IOException e) {
-      System.out.println(String.format("Failed to create client:%n%s", e.toString()));
-    } catch (InvalidArgumentException e) {
-      System.out.println(String.format("Invalid request:%n%s", e.toString()));
-    } catch (ApiException e) {
-      System.out.println(String.format("Error during AnalyzeIamPolicy:%n%s", e.toString()));
     }
   }
 }

@@ -18,8 +18,6 @@ package com.example.asset;
 
 // [START asset_quickstart_analyze_iam_policy_longrunning_gcs]
 import com.google.api.gax.longrunning.OperationFuture;
-import com.google.api.gax.rpc.ApiException;
-import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.cloud.asset.v1.AnalyzeIamPolicyLongrunningRequest;
 import com.google.cloud.asset.v1.AnalyzeIamPolicyLongrunningResponse;
 import com.google.cloud.asset.v1.AssetServiceClient;
@@ -28,30 +26,40 @@ import com.google.cloud.asset.v1.IamPolicyAnalysisOutputConfig.GcsDestination;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery.Options;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery.ResourceSelector;
-import java.io.IOException;
 
 public class AnalyzeIamPolicyLongrunningGcsExample {
 
+  public static void main(String[] args) throws Exception {
+    // TODO(developer): Replace these variables before running the sample.
+    String scope = "projects/<my-project-id>";
+    String fullResourceName = "//cloudresourcemanager.googleapis.com/projects/<<my-project-id>>";
+    String uri = "gs://<my-bucket-name>/<my-object-name>";
+    analyzeIamPolicyLongrunning(scope, fullResourceName, uri);
+  }
+
   // Analyzes accessible IAM policies that match a request.
-  public static void analyzeIamPolicyLongrunning(
-      String scope, String fullResourceName, String uri) {
+  public static void analyzeIamPolicyLongrunning(String scope, String fullResourceName, String uri)
+      throws Exception {
+    ResourceSelector resourceSelector =
+        ResourceSelector.newBuilder().setFullResourceName(fullResourceName).build();
+    Options options = Options.newBuilder().setExpandGroups(true).setOutputGroupEdges(true).build();
+    IamPolicyAnalysisQuery query =
+        IamPolicyAnalysisQuery.newBuilder()
+            .setScope(scope)
+            .setResourceSelector(resourceSelector)
+            .setOptions(options)
+            .build();
+
+    GcsDestination gcsDestination = GcsDestination.newBuilder().setUri(uri).build();
+    IamPolicyAnalysisOutputConfig outputConfig =
+        IamPolicyAnalysisOutputConfig.newBuilder()
+            .setGcsDestination(GcsDestination.newBuilder().setUri(uri).build())
+            .build();
+
     AnalyzeIamPolicyLongrunningRequest request =
         AnalyzeIamPolicyLongrunningRequest.newBuilder()
-            .setAnalysisQuery(
-                IamPolicyAnalysisQuery.newBuilder()
-                    .setScope(scope)
-                    .setResourceSelector(
-                        ResourceSelector.newBuilder().setFullResourceName(fullResourceName).build())
-                    .setOptions(
-                        Options.newBuilder()
-                            .setExpandGroups(true)
-                            .setOutputGroupEdges(true)
-                            .build())
-                    .build())
-            .setOutputConfig(
-                IamPolicyAnalysisOutputConfig.newBuilder()
-                    .setGcsDestination(GcsDestination.newBuilder().setUri(uri).build())
-                    .build())
+            .setAnalysisQuery(query)
+            .setOutputConfig(outputConfig)
             .build();
 
     // Initialize client that will be used to send requests. This client only needs to be created
@@ -61,15 +69,6 @@ public class AnalyzeIamPolicyLongrunningGcsExample {
       OperationFuture<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>
           future = client.analyzeIamPolicyLongrunningAsync(request);
       System.out.println("Analyze completed successfully:\n" + future.getMetadata().get());
-    } catch (IOException e) {
-      System.out.println(String.format("Failed to create client:%n%s", e.toString()));
-    } catch (InvalidArgumentException e) {
-      System.out.println(String.format("Invalid request:%n%s", e.toString()));
-    } catch (ApiException e) {
-      System.out.println(
-          String.format("Error during AnalyzeIamPolicyLongrunning:%n%s", e.toString()));
-    } catch (Exception e) {
-      System.out.println(String.format("Unknown error:%n%s", e.toString()));
     }
   }
 }

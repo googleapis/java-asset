@@ -24,6 +24,7 @@ import com.google.cloud.bigquery.BigQueryOptions;
 import com.google.cloud.bigquery.DatasetId;
 import com.google.cloud.bigquery.DatasetInfo;
 import com.google.cloud.bigquery.testing.RemoteBigQueryHelper;
+import com.google.cloud.storage.Blob;
 import com.google.cloud.storage.BlobInfo;
 import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.Storage.BlobListOption;
@@ -46,34 +47,27 @@ public class Analyze {
   private static final String scope = "projects/" + projectId;
   private static final String fullResourceName =
       "//cloudresourcemanager.googleapis.com/projects/" + projectId;
-  private static final String datasetName = RemoteBigQueryHelper.generateDatasetName();
-  // The developer needs to have bucket create permission or use an exsiting bucket.
-  private static final String bucketName = "java-docs-samples-testing";
-  private static final String objectName = UUID.randomUUID().toString();
+
   private ByteArrayOutputStream bout;
   private PrintStream out;
-  private BigQuery bigquery;
 
-  private static final void deleteObjects() {
+  private static final void deleteObjects(String bucketName, String objectName) {
     Storage storage = StorageOptions.getDefaultInstance().getService();
-    for (BlobInfo info :
+    Iterable<Blob> blobs =
         storage
             .list(
                 bucketName,
                 BlobListOption.versions(true),
                 BlobListOption.currentDirectory(),
                 BlobListOption.prefix(objectName))
-            .getValues()) {
+            .getValues();
+    for (BlobInfo info : blobs) {
       storage.delete(info.getBlobId());
     }
   }
 
   @Before
   public void setUp() {
-    bigquery = BigQueryOptions.getDefaultInstance().getService();
-    if (bigquery.getDataset(datasetName) == null) {
-      bigquery.create(DatasetInfo.newBuilder(datasetName).build());
-    }
     bout = new ByteArrayOutputStream();
     out = new PrintStream(bout);
     System.setOut(out);
@@ -83,9 +77,6 @@ public class Analyze {
   public void tearDown() {
     System.setOut(null);
     bout.reset();
-    deleteObjects();
-    DatasetId datasetId = DatasetId.of(bigquery.getOptions().getProjectId(), datasetName);
-    bigquery.delete(datasetId, DatasetDeleteOption.deleteContents());
   }
 
   @Test
@@ -97,19 +88,34 @@ public class Analyze {
 
   @Test
   public void testAnalyzeIamPolicyLongrunningBigQueryExample() throws Exception {
-    String dataset = String.format("projects/%s/datasets/%s", projectId, datasetName);
+    String datasetName = RemoteBigQueryHelper.generateDatasetName();
+    BigQuery bigquery = BigQueryOptions.getDefaultInstance().getService();
+    if (bigquery.getDataset(datasetName) == null) {
+      bigquery.create(DatasetInfo.newBuilder(datasetName).build());
+    }
+
+    String dataset = "projects/" + projectId + "/datasets/" + datasetName;
     String tablePrefix = "client_library_table";
     AnalyzeIamPolicyLongrunningBigqueryExample.analyzeIamPolicyLongrunning(
         scope, fullResourceName, dataset, tablePrefix);
     String got = bout.toString();
     assertThat(got).contains("output_config");
+
+    DatasetId datasetId = DatasetId.of(bigquery.getOptions().getProjectId(), datasetName);
+    bigquery.delete(datasetId, DatasetDeleteOption.deleteContents());
   }
 
   @Test
   public void testAnalyzeIamPolicyLongrunningGcsExample() throws Exception {
-    String uri = String.format("gs://%s/%s", bucketName, objectName);
+    // The developer needs to have bucket create permission or use an exsiting bucket.
+    String bucketName = "java-docs-samples-testing";
+    String objectName = UUID.randomUUID().toString();
+
+    String uri = "gs://" + bucketName + "/" + objectName;
     AnalyzeIamPolicyLongrunningGcsExample.analyzeIamPolicyLongrunning(scope, fullResourceName, uri);
     String got = bout.toString();
     assertThat(got).contains("output_config");
+
+    deleteObjects(bucketName, objectName);
   }
 }
