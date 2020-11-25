@@ -31,10 +31,10 @@ public class AnalyzeIamPolicyLongrunningBigqueryExample {
 
   public static void main(String[] args) throws Exception {
     // TODO(developer): Replace these variables before running the sample.
-    String scope = "projects/<my-project-id>";
-    String fullResourceName = "//cloudresourcemanager.googleapis.com/projects/<<my-project-id>>";
-    String dataset = "projects/<my-project-id>/datasets/<my-dataset-id>";
-    String tablePrefix = "<my-table-prefix>";
+    String scope = "organizations/ORG_ID";
+    String fullResourceName = "//cloudresourcemanager.googleapis.com/projects/PROJ_ID";
+    String dataset = "projects/PROJ_ID/datasets/DATASET_ID";
+    String tablePrefix = "TABLE_PREFIX";
     analyzeIamPolicyLongrunning(scope, fullResourceName, dataset, tablePrefix);
   }
 

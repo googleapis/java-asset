@@ -28,8 +28,8 @@ public class AnalyzeIamPolicyExample {
 
   public static void main(String[] args) throws Exception {
     // TODO(developer): Replace these variables before running the sample.
-    String scope = "projects/<my-project-id>";
-    String fullResourceName = "//cloudresourcemanager.googleapis.com/projects/<<my-project-id>>";
+    String scope = "organizations/ORG_ID";
+    String fullResourceName = "//cloudresourcemanager.googleapis.com/projects/PROJ_ID";
     analyzeIamPolicy(scope, fullResourceName);
   }
 
