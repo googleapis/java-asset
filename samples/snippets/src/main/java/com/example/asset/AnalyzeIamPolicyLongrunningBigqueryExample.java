@@ -18,6 +18,7 @@ package com.example.asset;
 
 // [START asset_quickstart_analyze_iam_policy_longrunning_bigquery]
 import com.google.api.gax.longrunning.OperationFuture;
+import com.google.api.gax.rpc.ApiException;
 import com.google.cloud.asset.v1.AnalyzeIamPolicyLongrunningRequest;
 import com.google.cloud.asset.v1.AnalyzeIamPolicyLongrunningResponse;
 import com.google.cloud.asset.v1.AssetServiceClient;
@@ -26,10 +27,12 @@ import com.google.cloud.asset.v1.IamPolicyAnalysisOutputConfig.BigQueryDestinati
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery.Options;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery.ResourceSelector;
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class AnalyzeIamPolicyLongrunningBigqueryExample {
 
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) {
     // TODO(developer): Replace these variables before running the sample.
     String scope = "organizations/ORG_ID";
     String fullResourceName = "//cloudresourcemanager.googleapis.com/projects/PROJ_ID";
@@ -40,7 +43,7 @@ public class AnalyzeIamPolicyLongrunningBigqueryExample {
 
   // Analyzes accessible IAM policies that match a request.
   public static void analyzeIamPolicyLongrunning(
-      String scope, String fullResourceName, String dataset, String tablePrefix) throws Exception {
+      String scope, String fullResourceName, String dataset, String tablePrefix) {
     ResourceSelector resourceSelector =
         ResourceSelector.newBuilder().setFullResourceName(fullResourceName).build();
     Options options = Options.newBuilder().setExpandGroups(true).setOutputGroupEdges(true).build();
@@ -71,6 +74,14 @@ public class AnalyzeIamPolicyLongrunningBigqueryExample {
       OperationFuture<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>
           future = client.analyzeIamPolicyLongrunningAsync(request);
       System.out.println("Analyze completed successfully:\n" + future.getMetadata().get());
+    } catch (IOException e) {
+      System.out.println("Failed to create client:\n" + e.toString());
+    } catch (InterruptedException e) {
+      System.out.println("Operation was interrupted:\n" + e.toString());
+    } catch (ExecutionException e) {
+      System.out.println("Operation was aborted:\n" + e.toString());
+    } catch (ApiException e) {
+      System.out.println("Error during AnalyzeIamPolicyLongrunning:\n" + e.toString());
     }
   }
 }

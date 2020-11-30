@@ -17,16 +17,18 @@
 package com.example.asset;
 
 // [START asset_quickstart_analyze_iam_policy]
+import com.google.api.gax.rpc.ApiException;
 import com.google.cloud.asset.v1.AnalyzeIamPolicyRequest;
 import com.google.cloud.asset.v1.AnalyzeIamPolicyResponse;
 import com.google.cloud.asset.v1.AssetServiceClient;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery.Options;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery.ResourceSelector;
+import java.io.IOException;
 
 public class AnalyzeIamPolicyExample {
 
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) {
     // TODO(developer): Replace these variables before running the sample.
     String scope = "organizations/ORG_ID";
     String fullResourceName = "//cloudresourcemanager.googleapis.com/projects/PROJ_ID";
@@ -34,7 +36,7 @@ public class AnalyzeIamPolicyExample {
   }
 
   // Analyzes accessible IAM policies that match a request.
-  public static void analyzeIamPolicy(String scope, String fullResourceName) throws Exception {
+  public static void analyzeIamPolicy(String scope, String fullResourceName) {
     ResourceSelector resourceSelector =
         ResourceSelector.newBuilder().setFullResourceName(fullResourceName).build();
     Options options = Options.newBuilder().setExpandGroups(true).setOutputGroupEdges(true).build();
@@ -53,6 +55,10 @@ public class AnalyzeIamPolicyExample {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       AnalyzeIamPolicyResponse response = client.analyzeIamPolicy(request);
       System.out.println("Analyze completed successfully:\n" + response);
+    } catch (IOException e) {
+      System.out.println("Failed to create client:\n" + e.toString());
+    } catch (ApiException e) {
+      System.out.println("Error during AnalyzeIamPolicy:\n" + e.toString());
     }
   }
 }
