@@ -22,7 +22,13 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * Asset service definition.
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/asset/v1p2beta1/asset_service.proto")
@@ -289,24 +295,49 @@ public final class AssetServiceGrpc {
     return AssetServiceFutureStub.newStub(factory, channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public abstract static class AssetServiceImplBase implements io.grpc.BindableService {
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a feed in a parent project/folder/organization to listen to its
+     * asset updates.
+     * </pre>
+     */
     public void createFeed(
         com.google.cloud.asset.v1p2beta1.CreateFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p2beta1.Feed> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateFeedMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets details about an asset feed.
+     * </pre>
+     */
     public void getFeed(
         com.google.cloud.asset.v1p2beta1.GetFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p2beta1.Feed> responseObserver) {
       asyncUnimplementedUnaryCall(getGetFeedMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists all asset feeds in a parent project/folder/organization.
+     * </pre>
+     */
     public void listFeeds(
         com.google.cloud.asset.v1p2beta1.ListFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p2beta1.ListFeedsResponse>
@@ -314,14 +345,26 @@ public final class AssetServiceGrpc {
       asyncUnimplementedUnaryCall(getListFeedsMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an asset feed configuration.
+     * </pre>
+     */
     public void updateFeed(
         com.google.cloud.asset.v1p2beta1.UpdateFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p2beta1.Feed> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateFeedMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an asset feed.
+     * </pre>
+     */
     public void deleteFeed(
         com.google.cloud.asset.v1p2beta1.DeleteFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -366,7 +409,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceStub
       extends io.grpc.stub.AbstractAsyncStub<AssetServiceStub> {
     private AssetServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -378,7 +427,14 @@ public final class AssetServiceGrpc {
       return new AssetServiceStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a feed in a parent project/folder/organization to listen to its
+     * asset updates.
+     * </pre>
+     */
     public void createFeed(
         com.google.cloud.asset.v1p2beta1.CreateFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p2beta1.Feed> responseObserver) {
@@ -386,7 +442,13 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getCreateFeedMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets details about an asset feed.
+     * </pre>
+     */
     public void getFeed(
         com.google.cloud.asset.v1p2beta1.GetFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p2beta1.Feed> responseObserver) {
@@ -394,7 +456,13 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getGetFeedMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists all asset feeds in a parent project/folder/organization.
+     * </pre>
+     */
     public void listFeeds(
         com.google.cloud.asset.v1p2beta1.ListFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p2beta1.ListFeedsResponse>
@@ -403,7 +471,13 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getListFeedsMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an asset feed configuration.
+     * </pre>
+     */
     public void updateFeed(
         com.google.cloud.asset.v1p2beta1.UpdateFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p2beta1.Feed> responseObserver) {
@@ -411,7 +485,13 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getUpdateFeedMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an asset feed.
+     * </pre>
+     */
     public void deleteFeed(
         com.google.cloud.asset.v1p2beta1.DeleteFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -420,7 +500,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingStub> {
     private AssetServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -433,38 +519,75 @@ public final class AssetServiceGrpc {
       return new AssetServiceBlockingStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a feed in a parent project/folder/organization to listen to its
+     * asset updates.
+     * </pre>
+     */
     public com.google.cloud.asset.v1p2beta1.Feed createFeed(
         com.google.cloud.asset.v1p2beta1.CreateFeedRequest request) {
       return blockingUnaryCall(getChannel(), getCreateFeedMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets details about an asset feed.
+     * </pre>
+     */
     public com.google.cloud.asset.v1p2beta1.Feed getFeed(
         com.google.cloud.asset.v1p2beta1.GetFeedRequest request) {
       return blockingUnaryCall(getChannel(), getGetFeedMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists all asset feeds in a parent project/folder/organization.
+     * </pre>
+     */
     public com.google.cloud.asset.v1p2beta1.ListFeedsResponse listFeeds(
         com.google.cloud.asset.v1p2beta1.ListFeedsRequest request) {
       return blockingUnaryCall(getChannel(), getListFeedsMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an asset feed configuration.
+     * </pre>
+     */
     public com.google.cloud.asset.v1p2beta1.Feed updateFeed(
         com.google.cloud.asset.v1p2beta1.UpdateFeedRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateFeedMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an asset feed.
+     * </pre>
+     */
     public com.google.protobuf.Empty deleteFeed(
         com.google.cloud.asset.v1p2beta1.DeleteFeedRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteFeedMethod(), getCallOptions(), request);
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<AssetServiceFutureStub> {
     private AssetServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -477,34 +600,65 @@ public final class AssetServiceGrpc {
       return new AssetServiceFutureStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a feed in a parent project/folder/organization to listen to its
+     * asset updates.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.cloud.asset.v1p2beta1.Feed>
         createFeed(com.google.cloud.asset.v1p2beta1.CreateFeedRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateFeedMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets details about an asset feed.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.cloud.asset.v1p2beta1.Feed>
         getFeed(com.google.cloud.asset.v1p2beta1.GetFeedRequest request) {
       return futureUnaryCall(getChannel().newCall(getGetFeedMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists all asset feeds in a parent project/folder/organization.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1p2beta1.ListFeedsResponse>
         listFeeds(com.google.cloud.asset.v1p2beta1.ListFeedsRequest request) {
       return futureUnaryCall(getChannel().newCall(getListFeedsMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an asset feed configuration.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.cloud.asset.v1p2beta1.Feed>
         updateFeed(com.google.cloud.asset.v1p2beta1.UpdateFeedRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateFeedMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an asset feed.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteFeed(
         com.google.cloud.asset.v1p2beta1.DeleteFeedRequest request) {
       return futureUnaryCall(

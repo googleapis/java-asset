@@ -22,7 +22,13 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * Asset service definition.
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/asset/v1/asset_service.proto")
@@ -559,17 +565,50 @@ public final class AssetServiceGrpc {
     return AssetServiceFutureStub.newStub(factory, channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public abstract static class AssetServiceImplBase implements io.grpc.BindableService {
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Exports assets with time and resource types to a given Cloud Storage
+     * location/BigQuery table. For Cloud Storage location destinations, the
+     * output format is newline-delimited JSON. Each line represents a
+     * [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+     * destinations, the output table stores the fields in asset proto as columns.
+     * This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
+     * , which allows you to keep track of the export. We recommend intervals of
+     * at least 2 seconds with exponential retry to poll the export operation
+     * result. For regular-size resource parent, the export operation usually
+     * finishes within 5 minutes.
+     * </pre>
+     */
     public void exportAssets(
         com.google.cloud.asset.v1.ExportAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getExportAssetsMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Batch gets the update history of assets that overlap a time window.
+     * For IAM_POLICY content, this API outputs history when the asset and its
+     * attached IAM POLICY both exist. This can create gaps in the output history.
+     * Otherwise, this API outputs history with asset in both non-delete or
+     * deleted status.
+     * If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+     * error.
+     * </pre>
+     */
     public void batchGetAssetsHistory(
         com.google.cloud.asset.v1.BatchGetAssetsHistoryRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.BatchGetAssetsHistoryResponse>
@@ -577,42 +616,82 @@ public final class AssetServiceGrpc {
       asyncUnimplementedUnaryCall(getBatchGetAssetsHistoryMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a feed in a parent project/folder/organization to listen to its
+     * asset updates.
+     * </pre>
+     */
     public void createFeed(
         com.google.cloud.asset.v1.CreateFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.Feed> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateFeedMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets details about an asset feed.
+     * </pre>
+     */
     public void getFeed(
         com.google.cloud.asset.v1.GetFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.Feed> responseObserver) {
       asyncUnimplementedUnaryCall(getGetFeedMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists all asset feeds in a parent project/folder/organization.
+     * </pre>
+     */
     public void listFeeds(
         com.google.cloud.asset.v1.ListFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.ListFeedsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getListFeedsMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an asset feed configuration.
+     * </pre>
+     */
     public void updateFeed(
         com.google.cloud.asset.v1.UpdateFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.Feed> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateFeedMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an asset feed.
+     * </pre>
+     */
     public void deleteFeed(
         com.google.cloud.asset.v1.DeleteFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteFeedMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all Cloud resources within the specified scope, such as a project,
+     * folder, or organization. The caller must be granted the
+     * `cloudasset.assets.searchAllResources` permission on the desired scope,
+     * otherwise the request will be rejected.
+     * </pre>
+     */
     public void searchAllResources(
         com.google.cloud.asset.v1.SearchAllResourcesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.SearchAllResourcesResponse>
@@ -620,7 +699,16 @@ public final class AssetServiceGrpc {
       asyncUnimplementedUnaryCall(getSearchAllResourcesMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all IAM policies within the specified scope, such as a project,
+     * folder, or organization. The caller must be granted the
+     * `cloudasset.assets.searchAllIamPolicies` permission on the desired scope,
+     * otherwise the request will be rejected.
+     * </pre>
+     */
     public void searchAllIamPolicies(
         com.google.cloud.asset.v1.SearchAllIamPoliciesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.SearchAllIamPoliciesResponse>
@@ -628,7 +716,14 @@ public final class AssetServiceGrpc {
       asyncUnimplementedUnaryCall(getSearchAllIamPoliciesMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Analyzes IAM policies to answer which identities have what accesses on
+     * which resources.
+     * </pre>
+     */
     public void analyzeIamPolicy(
         com.google.cloud.asset.v1.AnalyzeIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.AnalyzeIamPolicyResponse>
@@ -636,7 +731,21 @@ public final class AssetServiceGrpc {
       asyncUnimplementedUnaryCall(getAnalyzeIamPolicyMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Analyzes IAM policies asynchronously to answer which identities have what
+     * accesses on which resources, and writes the analysis results to a Google
+     * Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+     * output format is the JSON format that represents a
+     * [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+     * [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+     * status. We recommend intervals of at least 2 seconds with exponential
+     * backoff retry to poll the operation result. The metadata contains the
+     * request to help callers to map responses to requests.
+     * </pre>
+     */
     public void analyzeIamPolicyLongrunning(
         com.google.cloud.asset.v1.AnalyzeIamPolicyLongrunningRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -721,7 +830,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceStub
       extends io.grpc.stub.AbstractAsyncStub<AssetServiceStub> {
     private AssetServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -733,7 +848,22 @@ public final class AssetServiceGrpc {
       return new AssetServiceStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Exports assets with time and resource types to a given Cloud Storage
+     * location/BigQuery table. For Cloud Storage location destinations, the
+     * output format is newline-delimited JSON. Each line represents a
+     * [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+     * destinations, the output table stores the fields in asset proto as columns.
+     * This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
+     * , which allows you to keep track of the export. We recommend intervals of
+     * at least 2 seconds with exponential retry to poll the export operation
+     * result. For regular-size resource parent, the export operation usually
+     * finishes within 5 minutes.
+     * </pre>
+     */
     public void exportAssets(
         com.google.cloud.asset.v1.ExportAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -743,7 +873,19 @@ public final class AssetServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Batch gets the update history of assets that overlap a time window.
+     * For IAM_POLICY content, this API outputs history when the asset and its
+     * attached IAM POLICY both exist. This can create gaps in the output history.
+     * Otherwise, this API outputs history with asset in both non-delete or
+     * deleted status.
+     * If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+     * error.
+     * </pre>
+     */
     public void batchGetAssetsHistory(
         com.google.cloud.asset.v1.BatchGetAssetsHistoryRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.BatchGetAssetsHistoryResponse>
@@ -754,7 +896,14 @@ public final class AssetServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a feed in a parent project/folder/organization to listen to its
+     * asset updates.
+     * </pre>
+     */
     public void createFeed(
         com.google.cloud.asset.v1.CreateFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.Feed> responseObserver) {
@@ -762,7 +911,13 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getCreateFeedMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets details about an asset feed.
+     * </pre>
+     */
     public void getFeed(
         com.google.cloud.asset.v1.GetFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.Feed> responseObserver) {
@@ -770,7 +925,13 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getGetFeedMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists all asset feeds in a parent project/folder/organization.
+     * </pre>
+     */
     public void listFeeds(
         com.google.cloud.asset.v1.ListFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.ListFeedsResponse> responseObserver) {
@@ -778,7 +939,13 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getListFeedsMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an asset feed configuration.
+     * </pre>
+     */
     public void updateFeed(
         com.google.cloud.asset.v1.UpdateFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.Feed> responseObserver) {
@@ -786,7 +953,13 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getUpdateFeedMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an asset feed.
+     * </pre>
+     */
     public void deleteFeed(
         com.google.cloud.asset.v1.DeleteFeedRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -794,7 +967,16 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getDeleteFeedMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all Cloud resources within the specified scope, such as a project,
+     * folder, or organization. The caller must be granted the
+     * `cloudasset.assets.searchAllResources` permission on the desired scope,
+     * otherwise the request will be rejected.
+     * </pre>
+     */
     public void searchAllResources(
         com.google.cloud.asset.v1.SearchAllResourcesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.SearchAllResourcesResponse>
@@ -805,7 +987,16 @@ public final class AssetServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all IAM policies within the specified scope, such as a project,
+     * folder, or organization. The caller must be granted the
+     * `cloudasset.assets.searchAllIamPolicies` permission on the desired scope,
+     * otherwise the request will be rejected.
+     * </pre>
+     */
     public void searchAllIamPolicies(
         com.google.cloud.asset.v1.SearchAllIamPoliciesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.SearchAllIamPoliciesResponse>
@@ -816,7 +1007,14 @@ public final class AssetServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Analyzes IAM policies to answer which identities have what accesses on
+     * which resources.
+     * </pre>
+     */
     public void analyzeIamPolicy(
         com.google.cloud.asset.v1.AnalyzeIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1.AnalyzeIamPolicyResponse>
@@ -827,7 +1025,21 @@ public final class AssetServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Analyzes IAM policies asynchronously to answer which identities have what
+     * accesses on which resources, and writes the analysis results to a Google
+     * Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+     * output format is the JSON format that represents a
+     * [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+     * [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+     * status. We recommend intervals of at least 2 seconds with exponential
+     * backoff retry to poll the operation result. The metadata contains the
+     * request to help callers to map responses to requests.
+     * </pre>
+     */
     public void analyzeIamPolicyLongrunning(
         com.google.cloud.asset.v1.AnalyzeIamPolicyLongrunningRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -838,7 +1050,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingStub> {
     private AssetServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -851,71 +1069,168 @@ public final class AssetServiceGrpc {
       return new AssetServiceBlockingStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Exports assets with time and resource types to a given Cloud Storage
+     * location/BigQuery table. For Cloud Storage location destinations, the
+     * output format is newline-delimited JSON. Each line represents a
+     * [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+     * destinations, the output table stores the fields in asset proto as columns.
+     * This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
+     * , which allows you to keep track of the export. We recommend intervals of
+     * at least 2 seconds with exponential retry to poll the export operation
+     * result. For regular-size resource parent, the export operation usually
+     * finishes within 5 minutes.
+     * </pre>
+     */
     public com.google.longrunning.Operation exportAssets(
         com.google.cloud.asset.v1.ExportAssetsRequest request) {
       return blockingUnaryCall(getChannel(), getExportAssetsMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Batch gets the update history of assets that overlap a time window.
+     * For IAM_POLICY content, this API outputs history when the asset and its
+     * attached IAM POLICY both exist. This can create gaps in the output history.
+     * Otherwise, this API outputs history with asset in both non-delete or
+     * deleted status.
+     * If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+     * error.
+     * </pre>
+     */
     public com.google.cloud.asset.v1.BatchGetAssetsHistoryResponse batchGetAssetsHistory(
         com.google.cloud.asset.v1.BatchGetAssetsHistoryRequest request) {
       return blockingUnaryCall(
           getChannel(), getBatchGetAssetsHistoryMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a feed in a parent project/folder/organization to listen to its
+     * asset updates.
+     * </pre>
+     */
     public com.google.cloud.asset.v1.Feed createFeed(
         com.google.cloud.asset.v1.CreateFeedRequest request) {
       return blockingUnaryCall(getChannel(), getCreateFeedMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets details about an asset feed.
+     * </pre>
+     */
     public com.google.cloud.asset.v1.Feed getFeed(
         com.google.cloud.asset.v1.GetFeedRequest request) {
       return blockingUnaryCall(getChannel(), getGetFeedMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists all asset feeds in a parent project/folder/organization.
+     * </pre>
+     */
     public com.google.cloud.asset.v1.ListFeedsResponse listFeeds(
         com.google.cloud.asset.v1.ListFeedsRequest request) {
       return blockingUnaryCall(getChannel(), getListFeedsMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an asset feed configuration.
+     * </pre>
+     */
     public com.google.cloud.asset.v1.Feed updateFeed(
         com.google.cloud.asset.v1.UpdateFeedRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateFeedMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an asset feed.
+     * </pre>
+     */
     public com.google.protobuf.Empty deleteFeed(
         com.google.cloud.asset.v1.DeleteFeedRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteFeedMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all Cloud resources within the specified scope, such as a project,
+     * folder, or organization. The caller must be granted the
+     * `cloudasset.assets.searchAllResources` permission on the desired scope,
+     * otherwise the request will be rejected.
+     * </pre>
+     */
     public com.google.cloud.asset.v1.SearchAllResourcesResponse searchAllResources(
         com.google.cloud.asset.v1.SearchAllResourcesRequest request) {
       return blockingUnaryCall(
           getChannel(), getSearchAllResourcesMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all IAM policies within the specified scope, such as a project,
+     * folder, or organization. The caller must be granted the
+     * `cloudasset.assets.searchAllIamPolicies` permission on the desired scope,
+     * otherwise the request will be rejected.
+     * </pre>
+     */
     public com.google.cloud.asset.v1.SearchAllIamPoliciesResponse searchAllIamPolicies(
         com.google.cloud.asset.v1.SearchAllIamPoliciesRequest request) {
       return blockingUnaryCall(
           getChannel(), getSearchAllIamPoliciesMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Analyzes IAM policies to answer which identities have what accesses on
+     * which resources.
+     * </pre>
+     */
     public com.google.cloud.asset.v1.AnalyzeIamPolicyResponse analyzeIamPolicy(
         com.google.cloud.asset.v1.AnalyzeIamPolicyRequest request) {
       return blockingUnaryCall(
           getChannel(), getAnalyzeIamPolicyMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Analyzes IAM policies asynchronously to answer which identities have what
+     * accesses on which resources, and writes the analysis results to a Google
+     * Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+     * output format is the JSON format that represents a
+     * [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+     * [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+     * status. We recommend intervals of at least 2 seconds with exponential
+     * backoff retry to poll the operation result. The metadata contains the
+     * request to help callers to map responses to requests.
+     * </pre>
+     */
     public com.google.longrunning.Operation analyzeIamPolicyLongrunning(
         com.google.cloud.asset.v1.AnalyzeIamPolicyLongrunningRequest request) {
       return blockingUnaryCall(
@@ -923,7 +1238,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<AssetServiceFutureStub> {
     private AssetServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -936,14 +1257,41 @@ public final class AssetServiceGrpc {
       return new AssetServiceFutureStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Exports assets with time and resource types to a given Cloud Storage
+     * location/BigQuery table. For Cloud Storage location destinations, the
+     * output format is newline-delimited JSON. Each line represents a
+     * [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON format; for BigQuery table
+     * destinations, the output table stores the fields in asset proto as columns.
+     * This API implements the [google.longrunning.Operation][google.longrunning.Operation] API
+     * , which allows you to keep track of the export. We recommend intervals of
+     * at least 2 seconds with exponential retry to poll the export operation
+     * result. For regular-size resource parent, the export operation usually
+     * finishes within 5 minutes.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         exportAssets(com.google.cloud.asset.v1.ExportAssetsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getExportAssetsMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Batch gets the update history of assets that overlap a time window.
+     * For IAM_POLICY content, this API outputs history when the asset and its
+     * attached IAM POLICY both exist. This can create gaps in the output history.
+     * Otherwise, this API outputs history with asset in both non-delete or
+     * deleted status.
+     * If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+     * error.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1.BatchGetAssetsHistoryResponse>
         batchGetAssetsHistory(com.google.cloud.asset.v1.BatchGetAssetsHistoryRequest request) {
@@ -951,41 +1299,81 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getBatchGetAssetsHistoryMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a feed in a parent project/folder/organization to listen to its
+     * asset updates.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.cloud.asset.v1.Feed>
         createFeed(com.google.cloud.asset.v1.CreateFeedRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateFeedMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets details about an asset feed.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.cloud.asset.v1.Feed>
         getFeed(com.google.cloud.asset.v1.GetFeedRequest request) {
       return futureUnaryCall(getChannel().newCall(getGetFeedMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists all asset feeds in a parent project/folder/organization.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1.ListFeedsResponse>
         listFeeds(com.google.cloud.asset.v1.ListFeedsRequest request) {
       return futureUnaryCall(getChannel().newCall(getListFeedsMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Updates an asset feed configuration.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.cloud.asset.v1.Feed>
         updateFeed(com.google.cloud.asset.v1.UpdateFeedRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateFeedMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes an asset feed.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteFeed(
         com.google.cloud.asset.v1.DeleteFeedRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteFeedMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all Cloud resources within the specified scope, such as a project,
+     * folder, or organization. The caller must be granted the
+     * `cloudasset.assets.searchAllResources` permission on the desired scope,
+     * otherwise the request will be rejected.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1.SearchAllResourcesResponse>
         searchAllResources(com.google.cloud.asset.v1.SearchAllResourcesRequest request) {
@@ -993,7 +1381,16 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getSearchAllResourcesMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all IAM policies within the specified scope, such as a project,
+     * folder, or organization. The caller must be granted the
+     * `cloudasset.assets.searchAllIamPolicies` permission on the desired scope,
+     * otherwise the request will be rejected.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1.SearchAllIamPoliciesResponse>
         searchAllIamPolicies(com.google.cloud.asset.v1.SearchAllIamPoliciesRequest request) {
@@ -1001,7 +1398,14 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getSearchAllIamPoliciesMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Analyzes IAM policies to answer which identities have what accesses on
+     * which resources.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1.AnalyzeIamPolicyResponse>
         analyzeIamPolicy(com.google.cloud.asset.v1.AnalyzeIamPolicyRequest request) {
@@ -1009,7 +1413,21 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getAnalyzeIamPolicyMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Analyzes IAM policies asynchronously to answer which identities have what
+     * accesses on which resources, and writes the analysis results to a Google
+     * Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+     * output format is the JSON format that represents a
+     * [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+     * [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+     * status. We recommend intervals of at least 2 seconds with exponential
+     * backoff retry to poll the operation result. The metadata contains the
+     * request to help callers to map responses to requests.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         analyzeIamPolicyLongrunning(
             com.google.cloud.asset.v1.AnalyzeIamPolicyLongrunningRequest request) {
