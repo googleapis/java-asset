@@ -22,13 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * Asset service definition.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/asset/v1p4beta1/asset_service.proto")
@@ -176,23 +170,10 @@ public final class AssetServiceGrpc {
     return AssetServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Asset service definition.
-   * </pre>
-   */
+  /** */
   public abstract static class AssetServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Analyzes IAM policies based on the specified request. Returns
-     * a list of [IamPolicyAnalysisResult][google.cloud.asset.v1p4beta1.IamPolicyAnalysisResult] matching the request.
-     * </pre>
-     */
+    /** */
     public void analyzeIamPolicy(
         com.google.cloud.asset.v1p4beta1.AnalyzeIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p4beta1.AnalyzeIamPolicyResponse>
@@ -200,16 +181,7 @@ public final class AssetServiceGrpc {
       asyncUnimplementedUnaryCall(getAnalyzeIamPolicyMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Exports IAM policy analysis based on the specified request. This API
-     * implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you to keep
-     * track of the export. The metadata contains the request to help callers to
-     * map responses to requests.
-     * </pre>
-     */
+    /** */
     public void exportIamPolicyAnalysis(
         com.google.cloud.asset.v1p4beta1.ExportIamPolicyAnalysisRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -236,13 +208,7 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Asset service definition.
-   * </pre>
-   */
+  /** */
   public static final class AssetServiceStub
       extends io.grpc.stub.AbstractAsyncStub<AssetServiceStub> {
     private AssetServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -254,14 +220,7 @@ public final class AssetServiceGrpc {
       return new AssetServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Analyzes IAM policies based on the specified request. Returns
-     * a list of [IamPolicyAnalysisResult][google.cloud.asset.v1p4beta1.IamPolicyAnalysisResult] matching the request.
-     * </pre>
-     */
+    /** */
     public void analyzeIamPolicy(
         com.google.cloud.asset.v1p4beta1.AnalyzeIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p4beta1.AnalyzeIamPolicyResponse>
@@ -272,16 +231,7 @@ public final class AssetServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Exports IAM policy analysis based on the specified request. This API
-     * implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you to keep
-     * track of the export. The metadata contains the request to help callers to
-     * map responses to requests.
-     * </pre>
-     */
+    /** */
     public void exportIamPolicyAnalysis(
         com.google.cloud.asset.v1p4beta1.ExportIamPolicyAnalysisRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -292,13 +242,7 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Asset service definition.
-   * </pre>
-   */
+  /** */
   public static final class AssetServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingStub> {
     private AssetServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -311,30 +255,14 @@ public final class AssetServiceGrpc {
       return new AssetServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Analyzes IAM policies based on the specified request. Returns
-     * a list of [IamPolicyAnalysisResult][google.cloud.asset.v1p4beta1.IamPolicyAnalysisResult] matching the request.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.asset.v1p4beta1.AnalyzeIamPolicyResponse analyzeIamPolicy(
         com.google.cloud.asset.v1p4beta1.AnalyzeIamPolicyRequest request) {
       return blockingUnaryCall(
           getChannel(), getAnalyzeIamPolicyMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Exports IAM policy analysis based on the specified request. This API
-     * implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you to keep
-     * track of the export. The metadata contains the request to help callers to
-     * map responses to requests.
-     * </pre>
-     */
+    /** */
     public com.google.longrunning.Operation exportIamPolicyAnalysis(
         com.google.cloud.asset.v1p4beta1.ExportIamPolicyAnalysisRequest request) {
       return blockingUnaryCall(
@@ -342,13 +270,7 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Asset service definition.
-   * </pre>
-   */
+  /** */
   public static final class AssetServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<AssetServiceFutureStub> {
     private AssetServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -361,14 +283,7 @@ public final class AssetServiceGrpc {
       return new AssetServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Analyzes IAM policies based on the specified request. Returns
-     * a list of [IamPolicyAnalysisResult][google.cloud.asset.v1p4beta1.IamPolicyAnalysisResult] matching the request.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1p4beta1.AnalyzeIamPolicyResponse>
         analyzeIamPolicy(com.google.cloud.asset.v1p4beta1.AnalyzeIamPolicyRequest request) {
@@ -376,16 +291,7 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getAnalyzeIamPolicyMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Exports IAM policy analysis based on the specified request. This API
-     * implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you to keep
-     * track of the export. The metadata contains the request to help callers to
-     * map responses to requests.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         exportIamPolicyAnalysis(
             com.google.cloud.asset.v1p4beta1.ExportIamPolicyAnalysisRequest request) {
