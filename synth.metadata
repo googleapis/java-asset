@@ -4,55 +4,55 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-asset.git",
-        "sha": "6570891d112537414616bc91440cadcc5bf37d24"
+        "sha": "0cdd449bbd5ca3241f4a9ef795550171d042b02b"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "1f8a5144b52f7677dc43c55b21ccaf9e1b425ceb",
-        "internalRef": "342689216"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "1f8a5144b52f7677dc43c55b21ccaf9e1b425ceb",
-        "internalRef": "342689216"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "1f8a5144b52f7677dc43c55b21ccaf9e1b425ceb",
-        "internalRef": "342689216"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "1f8a5144b52f7677dc43c55b21ccaf9e1b425ceb",
-        "internalRef": "342689216"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "1f8a5144b52f7677dc43c55b21ccaf9e1b425ceb",
-        "internalRef": "342689216"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "1f8a5144b52f7677dc43c55b21ccaf9e1b425ceb",
-        "internalRef": "342689216"
+        "sha": "b11a87f3b54be3a5e42c15020ee1e0781f86da90",
+        "internalRef": "344134135"
       }
     },
     {
