@@ -22,7 +22,13 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * Asset service definition.
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/asset/v1p1beta1/asset_service.proto")
@@ -170,10 +176,27 @@ public final class AssetServiceGrpc {
     return AssetServiceFutureStub.newStub(factory, channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public abstract static class AssetServiceImplBase implements io.grpc.BindableService {
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all the resources under a given accessible CRM scope
+     * (project/folder/organization). This RPC gives callers
+     * especially admins the ability to search all the resources under a scope,
+     * even if they don't have .get permission of all the resources. Callers
+     * should have cloud.assets.SearchAllResources permission on the requested
+     * scope, otherwise it will be rejected.
+     * </pre>
+     */
     public void searchAllResources(
         com.google.cloud.asset.v1p1beta1.SearchAllResourcesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p1beta1.SearchAllResourcesResponse>
@@ -181,7 +204,18 @@ public final class AssetServiceGrpc {
       asyncUnimplementedUnaryCall(getSearchAllResourcesMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all the IAM policies under a given accessible CRM scope
+     * (project/folder/organization). This RPC gives callers
+     * especially admins the ability to search all the IAM policies under a scope,
+     * even if they don't have .getIamPolicy permission of all the IAM policies.
+     * Callers should have cloud.assets.SearchAllIamPolicies permission on the
+     * requested scope, otherwise it will be rejected.
+     * </pre>
+     */
     public void searchAllIamPolicies(
         com.google.cloud.asset.v1p1beta1.SearchAllIamPoliciesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p1beta1.SearchAllIamPoliciesResponse>
@@ -210,7 +244,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceStub
       extends io.grpc.stub.AbstractAsyncStub<AssetServiceStub> {
     private AssetServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -222,7 +262,18 @@ public final class AssetServiceGrpc {
       return new AssetServiceStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all the resources under a given accessible CRM scope
+     * (project/folder/organization). This RPC gives callers
+     * especially admins the ability to search all the resources under a scope,
+     * even if they don't have .get permission of all the resources. Callers
+     * should have cloud.assets.SearchAllResources permission on the requested
+     * scope, otherwise it will be rejected.
+     * </pre>
+     */
     public void searchAllResources(
         com.google.cloud.asset.v1p1beta1.SearchAllResourcesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p1beta1.SearchAllResourcesResponse>
@@ -233,7 +284,18 @@ public final class AssetServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all the IAM policies under a given accessible CRM scope
+     * (project/folder/organization). This RPC gives callers
+     * especially admins the ability to search all the IAM policies under a scope,
+     * even if they don't have .getIamPolicy permission of all the IAM policies.
+     * Callers should have cloud.assets.SearchAllIamPolicies permission on the
+     * requested scope, otherwise it will be rejected.
+     * </pre>
+     */
     public void searchAllIamPolicies(
         com.google.cloud.asset.v1p1beta1.SearchAllIamPoliciesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p1beta1.SearchAllIamPoliciesResponse>
@@ -245,7 +307,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingStub> {
     private AssetServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -258,14 +326,36 @@ public final class AssetServiceGrpc {
       return new AssetServiceBlockingStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all the resources under a given accessible CRM scope
+     * (project/folder/organization). This RPC gives callers
+     * especially admins the ability to search all the resources under a scope,
+     * even if they don't have .get permission of all the resources. Callers
+     * should have cloud.assets.SearchAllResources permission on the requested
+     * scope, otherwise it will be rejected.
+     * </pre>
+     */
     public com.google.cloud.asset.v1p1beta1.SearchAllResourcesResponse searchAllResources(
         com.google.cloud.asset.v1p1beta1.SearchAllResourcesRequest request) {
       return blockingUnaryCall(
           getChannel(), getSearchAllResourcesMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all the IAM policies under a given accessible CRM scope
+     * (project/folder/organization). This RPC gives callers
+     * especially admins the ability to search all the IAM policies under a scope,
+     * even if they don't have .getIamPolicy permission of all the IAM policies.
+     * Callers should have cloud.assets.SearchAllIamPolicies permission on the
+     * requested scope, otherwise it will be rejected.
+     * </pre>
+     */
     public com.google.cloud.asset.v1p1beta1.SearchAllIamPoliciesResponse searchAllIamPolicies(
         com.google.cloud.asset.v1p1beta1.SearchAllIamPoliciesRequest request) {
       return blockingUnaryCall(
@@ -273,7 +363,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<AssetServiceFutureStub> {
     private AssetServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -286,7 +382,18 @@ public final class AssetServiceGrpc {
       return new AssetServiceFutureStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all the resources under a given accessible CRM scope
+     * (project/folder/organization). This RPC gives callers
+     * especially admins the ability to search all the resources under a scope,
+     * even if they don't have .get permission of all the resources. Callers
+     * should have cloud.assets.SearchAllResources permission on the requested
+     * scope, otherwise it will be rejected.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1p1beta1.SearchAllResourcesResponse>
         searchAllResources(com.google.cloud.asset.v1p1beta1.SearchAllResourcesRequest request) {
@@ -294,7 +401,18 @@ public final class AssetServiceGrpc {
           getChannel().newCall(getSearchAllResourcesMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Searches all the IAM policies under a given accessible CRM scope
+     * (project/folder/organization). This RPC gives callers
+     * especially admins the ability to search all the IAM policies under a scope,
+     * even if they don't have .getIamPolicy permission of all the IAM policies.
+     * Callers should have cloud.assets.SearchAllIamPolicies permission on the
+     * requested scope, otherwise it will be rejected.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1p1beta1.SearchAllIamPoliciesResponse>
         searchAllIamPolicies(com.google.cloud.asset.v1p1beta1.SearchAllIamPoliciesRequest request) {

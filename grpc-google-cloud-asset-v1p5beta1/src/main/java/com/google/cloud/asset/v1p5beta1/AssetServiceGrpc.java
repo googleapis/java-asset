@@ -22,7 +22,13 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * Asset service definition.
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/asset/v1p5beta1/asset_service.proto")
@@ -120,10 +126,23 @@ public final class AssetServiceGrpc {
     return AssetServiceFutureStub.newStub(factory, channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public abstract static class AssetServiceImplBase implements io.grpc.BindableService {
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists assets with time and resource types and returns paged results in
+     * response.
+     * </pre>
+     */
     public void listAssets(
         com.google.cloud.asset.v1p5beta1.ListAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p5beta1.ListAssetsResponse>
@@ -145,7 +164,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceStub
       extends io.grpc.stub.AbstractAsyncStub<AssetServiceStub> {
     private AssetServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -157,7 +182,14 @@ public final class AssetServiceGrpc {
       return new AssetServiceStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists assets with time and resource types and returns paged results in
+     * response.
+     * </pre>
+     */
     public void listAssets(
         com.google.cloud.asset.v1p5beta1.ListAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1p5beta1.ListAssetsResponse>
@@ -167,7 +199,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingStub> {
     private AssetServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -180,14 +218,27 @@ public final class AssetServiceGrpc {
       return new AssetServiceBlockingStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists assets with time and resource types and returns paged results in
+     * response.
+     * </pre>
+     */
     public com.google.cloud.asset.v1p5beta1.ListAssetsResponse listAssets(
         com.google.cloud.asset.v1p5beta1.ListAssetsRequest request) {
       return blockingUnaryCall(getChannel(), getListAssetsMethod(), getCallOptions(), request);
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<AssetServiceFutureStub> {
     private AssetServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -200,7 +251,14 @@ public final class AssetServiceGrpc {
       return new AssetServiceFutureStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists assets with time and resource types and returns paged results in
+     * response.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1p5beta1.ListAssetsResponse>
         listAssets(com.google.cloud.asset.v1p5beta1.ListAssetsRequest request) {
