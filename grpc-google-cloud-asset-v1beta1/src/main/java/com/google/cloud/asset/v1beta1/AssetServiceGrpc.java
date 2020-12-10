@@ -22,7 +22,13 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * Asset service definition.
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/asset/v1beta1/asset_service.proto")
@@ -166,17 +172,45 @@ public final class AssetServiceGrpc {
     return AssetServiceFutureStub.newStub(factory, channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public abstract static class AssetServiceImplBase implements io.grpc.BindableService {
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Exports assets with time and resource types to a given Cloud Storage
+     * location. The output format is newline-delimited JSON.
+     * This API implements the
+     * [google.longrunning.Operation][google.longrunning.Operation] API allowing
+     * you to keep track of the export.
+     * </pre>
+     */
     public void exportAssets(
         com.google.cloud.asset.v1beta1.ExportAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getExportAssetsMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Batch gets the update history of assets that overlap a time window.
+     * For RESOURCE content, this API outputs history with asset in both
+     * non-delete or deleted status.
+     * For IAM_POLICY content, this API outputs history when the asset and its
+     * attached IAM POLICY both exist. This can create gaps in the output history.
+     * If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+     * error.
+     * </pre>
+     */
     public void batchGetAssetsHistory(
         com.google.cloud.asset.v1beta1.BatchGetAssetsHistoryRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1beta1.BatchGetAssetsHistoryResponse>
@@ -204,7 +238,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceStub
       extends io.grpc.stub.AbstractAsyncStub<AssetServiceStub> {
     private AssetServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -216,7 +256,17 @@ public final class AssetServiceGrpc {
       return new AssetServiceStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Exports assets with time and resource types to a given Cloud Storage
+     * location. The output format is newline-delimited JSON.
+     * This API implements the
+     * [google.longrunning.Operation][google.longrunning.Operation] API allowing
+     * you to keep track of the export.
+     * </pre>
+     */
     public void exportAssets(
         com.google.cloud.asset.v1beta1.ExportAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -226,7 +276,19 @@ public final class AssetServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Batch gets the update history of assets that overlap a time window.
+     * For RESOURCE content, this API outputs history with asset in both
+     * non-delete or deleted status.
+     * For IAM_POLICY content, this API outputs history when the asset and its
+     * attached IAM POLICY both exist. This can create gaps in the output history.
+     * If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+     * error.
+     * </pre>
+     */
     public void batchGetAssetsHistory(
         com.google.cloud.asset.v1beta1.BatchGetAssetsHistoryRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.asset.v1beta1.BatchGetAssetsHistoryResponse>
@@ -238,7 +300,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingStub> {
     private AssetServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -251,13 +319,35 @@ public final class AssetServiceGrpc {
       return new AssetServiceBlockingStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Exports assets with time and resource types to a given Cloud Storage
+     * location. The output format is newline-delimited JSON.
+     * This API implements the
+     * [google.longrunning.Operation][google.longrunning.Operation] API allowing
+     * you to keep track of the export.
+     * </pre>
+     */
     public com.google.longrunning.Operation exportAssets(
         com.google.cloud.asset.v1beta1.ExportAssetsRequest request) {
       return blockingUnaryCall(getChannel(), getExportAssetsMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Batch gets the update history of assets that overlap a time window.
+     * For RESOURCE content, this API outputs history with asset in both
+     * non-delete or deleted status.
+     * For IAM_POLICY content, this API outputs history when the asset and its
+     * attached IAM POLICY both exist. This can create gaps in the output history.
+     * If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+     * error.
+     * </pre>
+     */
     public com.google.cloud.asset.v1beta1.BatchGetAssetsHistoryResponse batchGetAssetsHistory(
         com.google.cloud.asset.v1beta1.BatchGetAssetsHistoryRequest request) {
       return blockingUnaryCall(
@@ -265,7 +355,13 @@ public final class AssetServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Asset service definition.
+   * </pre>
+   */
   public static final class AssetServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<AssetServiceFutureStub> {
     private AssetServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -278,14 +374,36 @@ public final class AssetServiceGrpc {
       return new AssetServiceFutureStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Exports assets with time and resource types to a given Cloud Storage
+     * location. The output format is newline-delimited JSON.
+     * This API implements the
+     * [google.longrunning.Operation][google.longrunning.Operation] API allowing
+     * you to keep track of the export.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         exportAssets(com.google.cloud.asset.v1beta1.ExportAssetsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getExportAssetsMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Batch gets the update history of assets that overlap a time window.
+     * For RESOURCE content, this API outputs history with asset in both
+     * non-delete or deleted status.
+     * For IAM_POLICY content, this API outputs history when the asset and its
+     * attached IAM POLICY both exist. This can create gaps in the output history.
+     * If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+     * error.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.asset.v1beta1.BatchGetAssetsHistoryResponse>
         batchGetAssetsHistory(com.google.cloud.asset.v1beta1.BatchGetAssetsHistoryRequest request) {
