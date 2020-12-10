@@ -158,7 +158,7 @@ public class AssetServiceClient implements BackgroundResource {
    *     </ul>
    *
    * @param query Optional. The query statement.
-   * @param asset_types Optional. A list of asset types that this request searches for. If empty, it
+   * @param assetTypes Optional. A list of asset types that this request searches for. If empty, it
    *     will search all the supported asset types.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
