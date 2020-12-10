@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     https://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.cloud.asset.v1beta1;
 
 import com.google.api.gax.core.NoCredentialsProvider;
@@ -26,14 +27,15 @@ import com.google.api.gax.rpc.StatusCode;
 import com.google.longrunning.Operation;
 import com.google.protobuf.AbstractMessage;
 import com.google.protobuf.Any;
-import io.grpc.Status;
+import com.google.protobuf.Timestamp;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
+import javax.annotation.Generated;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -41,31 +43,31 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-@javax.annotation.Generated("by GAPIC")
+@Generated("by gapic-generator-java")
 public class AssetServiceClientTest {
-  private static MockAssetService mockAssetService;
-  private static MockServiceHelper serviceHelper;
+  private static MockServiceHelper mockServiceHelper;
   private AssetServiceClient client;
   private LocalChannelProvider channelProvider;
+  private static MockAssetService mockAssetService;
 
   @BeforeClass
   public static void startStaticServer() {
     mockAssetService = new MockAssetService();
-    serviceHelper =
+    mockServiceHelper =
         new MockServiceHelper(
             UUID.randomUUID().toString(), Arrays.<MockGrpcService>asList(mockAssetService));
-    serviceHelper.start();
+    mockServiceHelper.start();
   }
 
   @AfterClass
   public static void stopServer() {
-    serviceHelper.stop();
+    mockServiceHelper.stop();
   }
 
   @Before
   public void setUp() throws IOException {
-    serviceHelper.reset();
-    channelProvider = serviceHelper.createChannelProvider();
+    mockServiceHelper.reset();
+    channelProvider = mockServiceHelper.createChannelProvider();
     AssetServiceSettings settings =
         AssetServiceSettings.newBuilder()
             .setTransportChannelProvider(channelProvider)
@@ -80,9 +82,12 @@ public class AssetServiceClientTest {
   }
 
   @Test
-  @SuppressWarnings("all")
   public void exportAssetsTest() throws Exception {
-    ExportAssetsResponse expectedResponse = ExportAssetsResponse.newBuilder().build();
+    ExportAssetsResponse expectedResponse =
+        ExportAssetsResponse.newBuilder()
+            .setReadTime(Timestamp.newBuilder().build())
+            .setOutputConfig(OutputConfig.newBuilder().build())
+            .build();
     Operation resultOperation =
         Operation.newBuilder()
             .setName("exportAssetsTest")
@@ -91,12 +96,12 @@ public class AssetServiceClientTest {
             .build();
     mockAssetService.addResponse(resultOperation);
 
-    String parent = "parent-995424086";
-    OutputConfig outputConfig = OutputConfig.newBuilder().build();
     ExportAssetsRequest request =
         ExportAssetsRequest.newBuilder()
-            .setParent(parent.toString())
-            .setOutputConfig(outputConfig)
+            .setParent("ExportAssetsRequest-846449128".toString())
+            .setReadTime(Timestamp.newBuilder().build())
+            .addAllAssetTypes(new ArrayList<String>())
+            .setOutputConfig(OutputConfig.newBuilder().build())
             .build();
 
     ExportAssetsResponse actualResponse = client.exportAssetsAsync(request).get();
@@ -104,10 +109,13 @@ public class AssetServiceClientTest {
 
     List<AbstractMessage> actualRequests = mockAssetService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
-    ExportAssetsRequest actualRequest = (ExportAssetsRequest) actualRequests.get(0);
+    ExportAssetsRequest actualRequest = ((ExportAssetsRequest) actualRequests.get(0));
 
-    Assert.assertEquals(Objects.toString(parent), Objects.toString(actualRequest.getParent()));
-    Assert.assertEquals(outputConfig, actualRequest.getOutputConfig());
+    Assert.assertEquals(request.getParent(), actualRequest.getParent());
+    Assert.assertEquals(request.getReadTime(), actualRequest.getReadTime());
+    Assert.assertEquals(request.getAssetTypesList(), actualRequest.getAssetTypesList());
+    Assert.assertEquals(request.getContentType(), actualRequest.getContentType());
+    Assert.assertEquals(request.getOutputConfig(), actualRequest.getOutputConfig());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -115,39 +123,41 @@ public class AssetServiceClientTest {
   }
 
   @Test
-  @SuppressWarnings("all")
   public void exportAssetsExceptionTest() throws Exception {
-    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
     mockAssetService.addException(exception);
 
     try {
-      String parent = "parent-995424086";
-      OutputConfig outputConfig = OutputConfig.newBuilder().build();
       ExportAssetsRequest request =
           ExportAssetsRequest.newBuilder()
-              .setParent(parent.toString())
-              .setOutputConfig(outputConfig)
+              .setParent("ExportAssetsRequest-846449128".toString())
+              .setReadTime(Timestamp.newBuilder().build())
+              .addAllAssetTypes(new ArrayList<String>())
+              .setOutputConfig(OutputConfig.newBuilder().build())
               .build();
-
       client.exportAssetsAsync(request).get();
       Assert.fail("No exception raised");
     } catch (ExecutionException e) {
       Assert.assertEquals(InvalidArgumentException.class, e.getCause().getClass());
-      InvalidArgumentException apiException = (InvalidArgumentException) e.getCause();
+      InvalidArgumentException apiException = ((InvalidArgumentException) e.getCause());
       Assert.assertEquals(StatusCode.Code.INVALID_ARGUMENT, apiException.getStatusCode().getCode());
     }
   }
 
   @Test
-  @SuppressWarnings("all")
-  public void batchGetAssetsHistoryTest() {
+  public void batchGetAssetsHistoryTest() throws Exception {
     BatchGetAssetsHistoryResponse expectedResponse =
-        BatchGetAssetsHistoryResponse.newBuilder().build();
+        BatchGetAssetsHistoryResponse.newBuilder()
+            .addAllAssets(new ArrayList<TemporalAsset>())
+            .build();
     mockAssetService.addResponse(expectedResponse);
 
-    String parent = "parent-995424086";
     BatchGetAssetsHistoryRequest request =
-        BatchGetAssetsHistoryRequest.newBuilder().setParent(parent.toString()).build();
+        BatchGetAssetsHistoryRequest.newBuilder()
+            .setParent("BatchGetAssetsHistoryRequest1575208378".toString())
+            .addAllAssetNames(new ArrayList<String>())
+            .setReadTimeWindow(TimeWindow.newBuilder().build())
+            .build();
 
     BatchGetAssetsHistoryResponse actualResponse = client.batchGetAssetsHistory(request);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -155,9 +165,12 @@ public class AssetServiceClientTest {
     List<AbstractMessage> actualRequests = mockAssetService.getRequests();
     Assert.assertEquals(1, actualRequests.size());
     BatchGetAssetsHistoryRequest actualRequest =
-        (BatchGetAssetsHistoryRequest) actualRequests.get(0);
+        ((BatchGetAssetsHistoryRequest) actualRequests.get(0));
 
-    Assert.assertEquals(Objects.toString(parent), Objects.toString(actualRequest.getParent()));
+    Assert.assertEquals(request.getParent(), actualRequest.getParent());
+    Assert.assertEquals(request.getAssetNamesList(), actualRequest.getAssetNamesList());
+    Assert.assertEquals(request.getContentType(), actualRequest.getContentType());
+    Assert.assertEquals(request.getReadTimeWindow(), actualRequest.getReadTimeWindow());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -165,20 +178,21 @@ public class AssetServiceClientTest {
   }
 
   @Test
-  @SuppressWarnings("all")
   public void batchGetAssetsHistoryExceptionTest() throws Exception {
-    StatusRuntimeException exception = new StatusRuntimeException(Status.INVALID_ARGUMENT);
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
     mockAssetService.addException(exception);
 
     try {
-      String parent = "parent-995424086";
       BatchGetAssetsHistoryRequest request =
-          BatchGetAssetsHistoryRequest.newBuilder().setParent(parent.toString()).build();
-
+          BatchGetAssetsHistoryRequest.newBuilder()
+              .setParent("BatchGetAssetsHistoryRequest1575208378".toString())
+              .addAllAssetNames(new ArrayList<String>())
+              .setReadTimeWindow(TimeWindow.newBuilder().build())
+              .build();
       client.batchGetAssetsHistory(request);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
-      // Expected exception
+      // Expected exception.
     }
   }
 }
