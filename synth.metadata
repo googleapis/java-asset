@@ -4,15 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-asset.git",
-        "sha": "0cdd449bbd5ca3241f4a9ef795550171d042b02b"
-      }
-    },
-    {
-      "git": {
-        "name": "googleapis",
-        "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "1f8a5144b52f7677dc43c55b21ccaf9e1b425ceb",
-        "internalRef": "342689216"
+        "sha": "aeb8c5ae66c605b3de855b9fe823664b53f51c6f"
       }
     },
     {
@@ -59,7 +51,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "5d11bd2888c38ce1fb6fa6bf25494a4219a73928"
+        "sha": "3f67ceece7e797a5736a25488aae35405649b90b"
       }
     }
   ],
