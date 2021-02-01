@@ -1,5 +1,15 @@
 # Changelog
 
+### [2.3.1](https://www.github.com/googleapis/java-asset/compare/v2.3.0...v2.3.1) (2021-02-01)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-bigquery to v1.126.6 ([#515](https://www.github.com/googleapis/java-asset/issues/515)) ([ef4c857](https://www.github.com/googleapis/java-asset/commit/ef4c8573c21762aaa34a28929eed7974975c5803))
+* update dependency com.google.cloud:google-cloud-resourcemanager to v0.118.8-alpha ([#520](https://www.github.com/googleapis/java-asset/issues/520)) ([b65feae](https://www.github.com/googleapis/java-asset/commit/b65feaed93aa26f8a07ea991dcd566d70987a9f3))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.18.0 ([#514](https://www.github.com/googleapis/java-asset/issues/514)) ([3ee554d](https://www.github.com/googleapis/java-asset/commit/3ee554dc083dc71b1697839ac0578b6552385d6b))
+* update dependency com.google.cloud:google-cloud-storage to v1.113.9 ([#516](https://www.github.com/googleapis/java-asset/issues/516)) ([6ef70f0](https://www.github.com/googleapis/java-asset/commit/6ef70f04faf483302b5d2792b03b4e523dc90505))
+
 ## [2.3.0](https://www.github.com/googleapis/java-asset/compare/v2.2.1...v2.3.0) (2021-01-07)
 
 
