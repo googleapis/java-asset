@@ -115,9 +115,7 @@ public class ProjectName implements ResourceName {
     return PATH_TEMPLATE.instantiate("project", project);
   }
 
-  /**
-   * Builder for ProjectName.
-   */
+  /** Builder for ProjectName. */
   public static class Builder {
 
     private String project;
@@ -131,8 +129,7 @@ public class ProjectName implements ResourceName {
       return this;
     }
 
-    private Builder() {
-    }
+    private Builder() {}
 
     private Builder(ProjectName projectName) {
       project = projectName.project;

@@ -213,6 +213,7 @@
   <modules>
     <module>google-cloud-asset</module>
     <module>grpc-google-cloud-asset-v1</module>
+    <module>grpc-google-cloud-asset-v1beta1</module>
     <module>grpc-google-cloud-asset-v1p1beta1</module>
     <module>grpc-google-cloud-asset-v1p2beta1</module>
     <module>grpc-google-cloud-asset-v1p4beta1</module>
@@ -221,6 +222,7 @@
     <module>proto-google-cloud-asset-v1</module>
     <module>proto-google-cloud-asset-v1p1beta1</module>
     <module>proto-google-cloud-asset-v1p2beta1</module>
+    <module>proto-google-cloud-asset-v1beta1</module>
     <module>proto-google-cloud-asset-v1p4beta1</module>
     <module>proto-google-cloud-asset-v1p5beta1</module>
     <module>proto-google-cloud-asset-v1p7beta1</module>
