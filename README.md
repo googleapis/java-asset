@@ -17,7 +17,7 @@ If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>libraries-bom</artifactId>
-      <version>20.7.0</version>
+      <version>20.8.0</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>
@@ -39,25 +39,25 @@ If you are using Maven without BOM, add this to your dependencies:
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-asset</artifactId>
-  <version>2.5.0</version>
+  <version>2.6.0</version>
 </dependency>
 
 ```
 
 If you are using Gradle 5.x or later, add this to your dependencies
 ```Groovy
-implementation platform('com.google.cloud:libraries-bom:20.7.0')
+implementation platform('com.google.cloud:libraries-bom:20.8.0')
 
 compile 'com.google.cloud:google-cloud-asset'
 ```
 If you are using Gradle without BOM, add this to your dependencies
 ```Groovy
-compile 'com.google.cloud:google-cloud-asset:2.5.0'
+compile 'com.google.cloud:google-cloud-asset:2.6.0'
 ```
 
 If you are using SBT, add this to your dependencies
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-asset" % "2.5.0"
+libraryDependencies += "com.google.cloud" % "google-cloud-asset" % "2.6.0"
 ```
 
 ## Authentication
@@ -123,9 +123,49 @@ To get help, follow the instructions in the [shared Troubleshooting document][tr
 
 Cloud Asset Inventory uses gRPC for the transport layer.
 
-## Java Versions
+## Supported Java Versions
 
 Java 7 or above is required for using this client.
+
+Google's Java client libraries,
+[Google Cloud Client Libraries][cloudlibs]
+and
+[Google Cloud API Libraries][apilibs],
+follow the
+[Oracle Java SE support roadmap][oracle]
+(see the Oracle Java SE Product Releases section).
+
+### For new development
+
+In general, new feature development occurs with support for the lowest Java
+LTS version covered by  Oracle's Premier Support (which typically lasts 5 years
+from initial General Availability). If the minimum required JVM for a given
+library is changed, it is accompanied by a [semver][semver] major release.
+
+Java 11 and (in September 2021) Java 17 are the best choices for new
+development.
+
+### Keeping production systems current
+
+Google tests its client libraries with all current LTS versions covered by
+Oracle's Extended Support (which typically lasts 8 years from initial
+General Availability).
+
+#### Legacy support
+
+Google's client libraries support legacy versions of Java runtimes with long
+term stable libraries that don't receive feature updates on a best efforts basis
+as it may not be possible to backport all patches.
+
+Google provides updates on a best efforts basis to apps that continue to use
+Java 7, though apps might need to upgrade to current versions of the library
+that supports their JVM.
+
+#### Where to find specific information
+
+The latest versions and the supported Java versions are identified on
+the individual GitHub repository `github.com/GoogleAPIs/java-SERVICENAME`
+and on [google-cloud-java][g-c-j].
 
 ## Versioning
 
@@ -187,3 +227,9 @@ Java is a registered trademark of Oracle and/or its affiliates.
 [enable-api]: https://console.cloud.google.com/flows/enableapi?apiid=cloudasset.googleapis.com
 [libraries-bom]: https://github.com/GoogleCloudPlatform/cloud-opensource-java/wiki/The-Google-Cloud-Platform-Libraries-BOM
 [shell_img]: https://gstatic.com/cloudssh/images/open-btn.png
+
+[semver]: https://semver.org/
+[cloudlibs]: https://cloud.google.com/apis/docs/client-libraries-explained
+[apilibs]: https://cloud.google.com/apis/docs/client-libraries-explained#google_api_client_libraries
+[oracle]: https://www.oracle.com/java/technologies/java-se-support-roadmap.html
+[g-c-j]: http://github.com/googleapis/google-cloud-java
