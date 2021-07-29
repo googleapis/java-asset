@@ -26,7 +26,6 @@ import java.util.Arrays;
 // [START asset_quickstart_list_assets]
 // Imports the Google Cloud client library
 
-
 public class ListAssetsExample {
 
   public static void listAssets() throws Exception {
