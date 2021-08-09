@@ -69,9 +69,7 @@ public class AnalyzeIamPolicyLongrunningGcsExample {
     // once, and can be reused for multiple requests. After completing all of your requests, call
     // the "close" method on the client to safely clean up any remaining background resources.
     try (AssetServiceClient client = AssetServiceClient.create()) {
-      OperationFuture<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>
-          future = client.analyzeIamPolicyLongrunningAsync(request);
-      System.out.println("Analyze completed successfully:\n" + future.getMetadata().get());
+      System.out.println("Analyze completed successfully:\n" + client.analyzeIamPolicyLongrunningAsync(request).getMetadata().get());
     } catch (IOException e) {
       System.out.println("Failed to create client:\n" + e.toString());
     } catch (InterruptedException e) {
