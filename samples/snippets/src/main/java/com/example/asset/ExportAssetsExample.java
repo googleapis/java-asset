@@ -53,4 +53,4 @@ public class ExportAssetsExample {
     }
   }
 }
-// [END asset_quickstart_export_asse]
+// [END asset_quickstart_export_assets]
