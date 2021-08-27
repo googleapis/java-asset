@@ -37,35 +37,39 @@ public class ExportAssetsBigqueryExample {
   // Export assets for a project.
   // @param args path where the results will be exported to.
   public static void exportBigQuery(
-      String bigqueryDataset, String bigqueryTable, ContentType contentType, boolean perType) throws Exception {
+      String bigqueryDataset, String bigqueryTable, ContentType contentType, boolean perType)
+      throws Exception {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       ProjectName parent = ProjectName.of(projectId);
       OutputConfig outputConfig;
-      if(perType){
-        outputConfig = OutputConfig.newBuilder()
-              .setBigqueryDestination(
-                  BigQueryDestination.newBuilder()
-                      .setDataset(bigqueryDataset)
-                      .setTable(bigqueryTable)
-                      .setForce(true)
-                      .setSeparateTablesPerAssetType(true)
-                      .setPartitionSpec(
-                          PartitionSpec.newBuilder()
-                          .setPartitionKey(PartitionSpec.PartitionKey.READ_TIME)
-                          .build())
-                      .build())
-              .build();
+      if (perType) {
+        outputConfig =
+            OutputConfig.newBuilder()
+                .setBigqueryDestination(
+                    BigQueryDestination.newBuilder()
+                        .setDataset(bigqueryDataset)
+                        .setTable(bigqueryTable)
+                        .setForce(true)
+                        .setSeparateTablesPerAssetType(true)
+                        .setPartitionSpec(
+                            PartitionSpec.newBuilder()
+                                .setPartitionKey(PartitionSpec.PartitionKey.READ_TIME)
+                                .build())
+                        .build())
+                .build();
       } else {
-         outputConfig = OutputConfig.newBuilder()
-              .setBigqueryDestination(
-                  BigQueryDestination.newBuilder()
-                      .setDataset(bigqueryDataset)
-                      .setTable(bigqueryTable)
-                      .setForce(true)
-                      .build())
-              .build();
+        outputConfig =
+            OutputConfig.newBuilder()
+                .setBigqueryDestination(
+                    BigQueryDestination.newBuilder()
+                        .setDataset(bigqueryDataset)
+                        .setTable(bigqueryTable)
+                        .setForce(true)
+                        .build())
+                .build();
       }
-      ExportAssetsRequest request = ExportAssetsRequest.newBuilder()
+      ExportAssetsRequest request =
+          ExportAssetsRequest.newBuilder()
               .setParent(parent.toString())
               .setContentType(contentType)
               .setOutputConfig(outputConfig)

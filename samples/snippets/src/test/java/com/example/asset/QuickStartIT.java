@@ -101,7 +101,8 @@ public class QuickStartIT {
     String dataset =
         String.format("projects/%s/datasets/%s", ServiceOptions.getDefaultProjectId(), datasetName);
     String table = "java_test";
-    ExportAssetsBigqueryExample.exportBigQuery(dataset, table, ContentType.RESOURCE, /*perType*/true);
+    ExportAssetsBigqueryExample.exportBigQuery(
+        dataset, table, ContentType.RESOURCE, /*perType*/ true);
     String got = bout.toString();
     assertThat(got).contains(String.format("dataset: \"%s\"", dataset));
   }
@@ -111,7 +112,8 @@ public class QuickStartIT {
     String dataset =
         String.format("projects/%s/datasets/%s", ServiceOptions.getDefaultProjectId(), datasetName);
     String table = "java_test";
-    ExportAssetsBigqueryExample.exportBigQuery(dataset, table, ContentType.RELATIONSHIP, /*perType*/false );
+    ExportAssetsBigqueryExample.exportBigQuery(
+        dataset, table, ContentType.RELATIONSHIP, /*perType*/ false);
     String got = bout.toString();
     assertThat(got).contains(String.format("dataset: \"%s\"", dataset));
   }
