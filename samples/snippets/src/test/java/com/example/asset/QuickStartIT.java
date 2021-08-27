@@ -100,7 +100,7 @@ public class QuickStartIT {
   public void testExportAssetBigqueryPerTypeExample() throws Exception {
     String dataset =
         String.format("projects/%s/datasets/%s", ServiceOptions.getDefaultProjectId(), datasetName);
-    String table = "java_test";
+    String table = "java_test_per_type";
     ExportAssetsBigqueryExample.exportBigQuery(
         dataset, table, ContentType.RESOURCE, /*perType*/ true);
     String got = bout.toString();
