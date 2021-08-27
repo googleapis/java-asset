@@ -44,7 +44,6 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 @SuppressWarnings("checkstyle:abbreviationaswordinname")
 public class QuickStartIT {
-  // For local test, please change it to a bucket the credential has access to.
   private static final String bucketName = "java-docs-samples-testing";
   private static final String path = UUID.randomUUID().toString();
   private static final String datasetName = RemoteBigQueryHelper.generateDatasetName();
@@ -119,8 +118,6 @@ public class QuickStartIT {
 
   @Test
   public void testBatchGetAssetsHistory() throws Exception {
-    // Wait 20 seconds to let bucket creation event go to CAI
-    Thread.sleep(20000);
     String bucketAssetName = String.format("//storage.googleapis.com/%s", bucketName);
     BatchGetAssetsHistoryExample.main(bucketAssetName);
     String got = bout.toString();
