@@ -18,6 +18,7 @@ package com.example.asset;
 
 // [START asset_quickstart_create_feed]
 import com.google.cloud.asset.v1.AssetServiceClient;
+import com.google.cloud.asset.v1.ContentType;
 import com.google.cloud.asset.v1.CreateFeedRequest;
 import com.google.cloud.asset.v1.Feed;
 import com.google.cloud.asset.v1.FeedOutputConfig;
@@ -27,15 +28,18 @@ import java.util.Arrays;
 
 public class CreateFeedExample {
   // Create a feed
-  public static void createFeed(String[] assetNames, String feedId, String topic, String projectId)
+  public static void createFeed(
+      String[] assetNames, String feedId, String topic, String projectId, ContentType contentType)
       throws Exception {
     // String[] assetNames = {"MY_ASSET_NAME"}
+    // ContentType contentType = contentType
     // String FeedId = "MY_FEED_ID"
     // String topic = "projects/[PROJECT_ID]/topics/[TOPIC_NAME]"
     // String projectID = "MY_PROJECT_ID"
     Feed feed =
         Feed.newBuilder()
             .addAllAssetNames(Arrays.asList(assetNames))
+            .setContentType(contentType)
             .setFeedOutputConfig(
                 FeedOutputConfig.newBuilder()
                     .setPubsubDestination(PubsubDestination.newBuilder().setTopic(topic).build())

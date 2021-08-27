@@ -19,6 +19,7 @@ package com.example.asset;
 import static com.google.common.truth.Truth.assertThat;
 
 import com.google.cloud.ServiceOptions;
+import com.google.cloud.asset.v1.ContentType;
 import com.google.cloud.bigquery.BigQuery;
 import com.google.cloud.bigquery.BigQuery.DatasetDeleteOption;
 import com.google.cloud.bigquery.BigQueryOptions;
@@ -43,6 +44,7 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 @SuppressWarnings("checkstyle:abbreviationaswordinname")
 public class QuickStartIT {
+  // For local test, please change it to a bucket the credential has access to.
   private static final String bucketName = "java-docs-samples-testing";
   private static final String path = UUID.randomUUID().toString();
   private static final String datasetName = RemoteBigQueryHelper.generateDatasetName();
@@ -90,9 +92,19 @@ public class QuickStartIT {
   @Test
   public void testExportAssetExample() throws Exception {
     String assetDumpPath = String.format("gs://%s/%s/my-assets-dump.txt", bucketName, path);
-    ExportAssetsExample.main(assetDumpPath);
+    ExportAssetsExample.exportAssets(assetDumpPath, ContentType.RESOURCE);
     String got = bout.toString();
     assertThat(got).contains(String.format("uri: \"%s\"", assetDumpPath));
+  }
+
+  @Test
+  public void testExportAssetBigqueryPerTypeExample() throws Exception {
+    String dataset =
+        String.format("projects/%s/datasets/%s", ServiceOptions.getDefaultProjectId(), datasetName);
+    String table = "java_test";
+    ExportAssetsBigqueryExample.exportBigQuery(dataset, table, ContentType.RESOURCE, /*perType*/true);
+    String got = bout.toString();
+    assertThat(got).contains(String.format("dataset: \"%s\"", dataset));
   }
 
   @Test
@@ -100,15 +112,15 @@ public class QuickStartIT {
     String dataset =
         String.format("projects/%s/datasets/%s", ServiceOptions.getDefaultProjectId(), datasetName);
     String table = "java_test";
-    ExportAssetsBigqueryExample.exportBigQuery(dataset, table);
+    ExportAssetsBigqueryExample.exportBigQuery(dataset, table, ContentType.RELATIONSHIP, /*perType*/false );
     String got = bout.toString();
     assertThat(got).contains(String.format("dataset: \"%s\"", dataset));
   }
 
   @Test
   public void testBatchGetAssetsHistory() throws Exception {
-    // Wait 10 seconds to let bucket creation event go to CAI
-    Thread.sleep(10000);
+    // Wait 20 seconds to let bucket creation event go to CAI
+    Thread.sleep(20000);
     String bucketAssetName = String.format("//storage.googleapis.com/%s", bucketName);
     BatchGetAssetsHistoryExample.main(bucketAssetName);
     String got = bout.toString();

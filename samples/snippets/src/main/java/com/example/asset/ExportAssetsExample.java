@@ -21,6 +21,7 @@ package com.example.asset;
 
 import com.google.cloud.ServiceOptions;
 import com.google.cloud.asset.v1.AssetServiceClient;
+import com.google.cloud.asset.v1.ContentType;
 import com.google.cloud.asset.v1.ExportAssetsRequest;
 import com.google.cloud.asset.v1.ExportAssetsResponse;
 import com.google.cloud.asset.v1.GcsDestination;
@@ -33,10 +34,8 @@ public class ExportAssetsExample {
   private static final String projectId = ServiceOptions.getDefaultProjectId();
 
   // Export assets for a project.
-  // @param args path where the results will be exported to.
-  public static void main(String... args) throws Exception {
-    // Gcs path, e.g.: "gs://<my_asset_bucket>/<my_asset_dump_file>"
-    String exportPath = args[0];
+  // @param exportPath where the results will be exported to.
+  public static void exportAssets(String exportPath, ContentType contentType) throws Exception {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       ProjectName parent = ProjectName.of(projectId);
       OutputConfig outputConfig =
@@ -47,6 +46,7 @@ public class ExportAssetsExample {
           ExportAssetsRequest.newBuilder()
               .setParent(parent.toString())
               .setOutputConfig(outputConfig)
+              .setContentType(contentType)
               .build();
       ExportAssetsResponse response = client.exportAssetsAsync(request).get();
       System.out.println(response);
