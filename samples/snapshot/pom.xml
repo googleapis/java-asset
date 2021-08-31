@@ -40,13 +40,13 @@
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-storage</artifactId>
-      <version>2.0.2</version>
+      <version>2.1.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-bigquery</artifactId>
-      <version>2.1.2</version>
+      <version>2.1.4</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -58,7 +58,7 @@
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-resourcemanager</artifactId>
-      <version>1.0.3</version>
+      <version>1.0.4</version>
       <scope>test</scope>
     </dependency>
     <dependency>
