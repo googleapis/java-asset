@@ -34,15 +34,17 @@ public class ExportAssetsBigqueryExample {
   // Use the default project Id.
   private static final String projectId = ServiceOptions.getDefaultProjectId();
 
-  // Export assets for a project.
-  // @param args path where the results will be exported to.
+  // Export assets to BigQuery for a project.
   public static void exportBigQuery(
-      String bigqueryDataset, String bigqueryTable, ContentType contentType, boolean perType)
-      throws Exception {
+      String bigqueryDataset,
+      String bigqueryTable,
+      ContentType contentType,
+      boolean isPerType) throws Exception {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       ProjectName parent = ProjectName.of(projectId);
       OutputConfig outputConfig;
-      if (perType) {
+      // Outputs to per-type BigQuery table.
+      if (isPerType) {
         outputConfig =
             OutputConfig.newBuilder()
                 .setBigqueryDestination(
