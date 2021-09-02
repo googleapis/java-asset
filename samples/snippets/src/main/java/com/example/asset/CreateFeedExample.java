@@ -24,6 +24,7 @@ import com.google.cloud.asset.v1.Feed;
 import com.google.cloud.asset.v1.FeedOutputConfig;
 import com.google.cloud.asset.v1.ProjectName;
 import com.google.cloud.asset.v1.PubsubDestination;
+import java.io.IOException;
 import java.util.Arrays;
 
 public class CreateFeedExample {
@@ -33,7 +34,7 @@ public class CreateFeedExample {
       String feedId,
       String topic,
       String projectId,
-      ContentType contentType) throws Exception {
+      ContentType contentType) throws IOException, IllegalArgumentException {
     // String[] assetNames = {"MY_ASSET_NAME"}
     // ContentType contentType = contentType
     // String FeedId = "MY_FEED_ID"
@@ -60,7 +61,7 @@ public class CreateFeedExample {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       Feed response = client.createFeed(request);
       System.out.println("Feed created successfully: " + response.getName());
-    } catch (Exception e) {
+    } catch (IOException | IllegalArgumentException e) {
       System.out.println("Error during CreateFeed: \n" + e.toString());
     }
   }

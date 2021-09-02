@@ -28,6 +28,8 @@ import com.google.cloud.asset.v1.ExportAssetsResponse;
 import com.google.cloud.asset.v1.OutputConfig;
 import com.google.cloud.asset.v1.PartitionSpec;
 import com.google.cloud.asset.v1.ProjectName;
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class ExportAssetsBigqueryExample {
 
@@ -39,7 +41,8 @@ public class ExportAssetsBigqueryExample {
       String bigqueryDataset,
       String bigqueryTable,
       ContentType contentType,
-      boolean isPerType) throws Exception {
+      boolean isPerType)
+      throws IOException, IllegalArgumentException, InterruptedException, ExecutionException {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       ProjectName parent = ProjectName.of(projectId);
       OutputConfig outputConfig;

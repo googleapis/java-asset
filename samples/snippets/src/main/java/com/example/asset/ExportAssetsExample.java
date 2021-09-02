@@ -27,6 +27,8 @@ import com.google.cloud.asset.v1.ExportAssetsResponse;
 import com.google.cloud.asset.v1.GcsDestination;
 import com.google.cloud.asset.v1.OutputConfig;
 import com.google.cloud.asset.v1.ProjectName;
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class ExportAssetsExample {
 
@@ -35,7 +37,8 @@ public class ExportAssetsExample {
 
   // Export assets for a project.
   // @param exportPath where the results will be exported to.
-  public static void exportAssets(String exportPath, ContentType contentType) throws Exception {
+  public static void exportAssets(String exportPath, ContentType contentType)
+      throws IOException, IllegalArgumentException, InterruptedException, ExecutionException {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       ProjectName parent = ProjectName.of(projectId);
       OutputConfig outputConfig =
