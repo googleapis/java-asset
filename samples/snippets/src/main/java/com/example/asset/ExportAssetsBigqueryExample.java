@@ -38,10 +38,7 @@ public class ExportAssetsBigqueryExample {
 
   // Export assets to BigQuery for a project.
   public static void exportBigQuery(
-      String bigqueryDataset,
-      String bigqueryTable,
-      ContentType contentType,
-      boolean isPerType)
+      String bigqueryDataset, String bigqueryTable, ContentType contentType, boolean isPerType)
       throws IOException, IllegalArgumentException, InterruptedException, ExecutionException {
     try (AssetServiceClient client = AssetServiceClient.create()) {
       ProjectName parent = ProjectName.of(projectId);

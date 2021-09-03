@@ -18,7 +18,6 @@ package com.example.asset;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.google.cloud.ServiceOptions;
 import com.google.cloud.asset.v1.ContentType;
 import com.google.cloud.pubsub.v1.TopicAdminClient;
 import com.google.cloud.resourcemanager.ProjectInfo;
@@ -98,8 +97,11 @@ public class RealTimeFeed {
   @Test
   public void test1CreateFeedRelationshipExample() throws Exception {
     CreateFeedExample.createFeed(
-        assetNames, feedId + "relationship", topicName.toString(),
-        projectId, ContentType.RELATIONSHIP);
+        assetNames,
+        feedId + "relationship",
+        topicName.toString(),
+        projectId,
+        ContentType.RELATIONSHIP);
     String got = bout.toString();
     assertThat(got).contains("Feed created successfully: " + feedName);
   }

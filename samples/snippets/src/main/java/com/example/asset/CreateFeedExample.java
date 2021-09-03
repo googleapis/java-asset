@@ -30,11 +30,8 @@ import java.util.Arrays;
 public class CreateFeedExample {
   // Create a feed
   public static void createFeed(
-      String[] assetNames,
-      String feedId,
-      String topic,
-      String projectId,
-      ContentType contentType) throws IOException, IllegalArgumentException {
+      String[] assetNames, String feedId, String topic, String projectId, ContentType contentType)
+      throws IOException, IllegalArgumentException {
     // String[] assetNames = {"MY_ASSET_NAME"}
     // ContentType contentType = contentType
     // String FeedId = "MY_FEED_ID"
