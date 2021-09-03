@@ -98,7 +98,8 @@ public class RealTimeFeed {
   @Test
   public void test1CreateFeedRelationshipExample() throws Exception {
     CreateFeedExample.createFeed(
-        assetNames, feedId+"relationship", topicName.toString(), projectId, ContentType.RELATIONSHIP);
+        assetNames, feedId + "relationship", topicName.toString(),
+        projectId, ContentType.RELATIONSHIP);
     String got = bout.toString();
     assertThat(got).contains("Feed created successfully: " + feedName);
   }
@@ -127,7 +128,7 @@ public class RealTimeFeed {
   @Test
   public void test5DeleteFeedExample() throws Exception {
     DeleteFeedExample.deleteFeed(feedName);
-    DeleteFeedExample.deleteFeed(feedName+"relationship");
+    DeleteFeedExample.deleteFeed(feedName + "relationship");
     String got = bout.toString();
     assertThat(got).contains("Feed deleted");
   }
