@@ -155,15 +155,10 @@
       </dependency>
       <dependency>
         <groupId>com.google.cloud</groupId>
-        <artifactId>google-cloud-pubsub</artifactId>
-        <version>1.102.1</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.google.api.grpc</groupId>
-        <artifactId>proto-google-cloud-pubsub-v1</artifactId>
-        <version>1.96.5</version>
-        <scope>test</scope>
+        <artifactId>google-cloud-pubsub-bom</artifactId>
+        <version>1.114.5</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>com.google.cloud</groupId>
