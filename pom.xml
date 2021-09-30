@@ -164,6 +164,7 @@
         <artifactId>proto-google-cloud-pubsub-v1</artifactId>
         <version>1.96.5</version>
         <scope>test</scope>
+      </dependency>
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-resourcemanager</artifactId>
