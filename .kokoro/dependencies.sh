@@ -68,7 +68,7 @@ function completenessCheck() {
   # This is stripped from the output as it is not present in the flattened pom.
   # Only dependencies with 'compile' or 'runtime' scope are included from original dependency list.
   msg "Generating dependency list using original pom..."
-  mvn dependency:list -f pom.xml -DincludeScope=runtime -DexcludeArtifactIds=commons-codec,commons-loggin,annotations,animal-sniffer-annotations,protobuf-java-util -Dsort=true | grep '\[INFO]    .*:.*:.*:.*:.*' | sed -e 's/ --.*//' >.org-list.txt
+  mvn dependency:list -f pom.xml -DincludeScope=runtime -DexcludeArtifactIds=commons-codec,commons-logging,annotations,animal-sniffer-annotations,protobuf-java-util -Dsort=true | grep '\[INFO]    .*:.*:.*:.*:.*' | sed -e 's/ --.*//' >.org-list.txt
 
   # Output dep list generated using the flattened pom (only 'compile' and 'runtime' scopes)
   msg "Generating dependency list using flattened pom..."
