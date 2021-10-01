@@ -72,7 +72,7 @@ function completenessCheck() {
 
   # Output dep list generated using the flattened pom (only 'compile' and 'runtime' scopes)
   msg "Generating dependency list using flattened pom..."
-  mvn dependency:list -f .flattened-pom.xml -DincludeScope=runtime -Dsort=true | grep '\[INFO]    .*:.*:.*:.*:.*' >.new-list.txt
+  mvn dependency:list -f .flattened-pom.xml -DincludeScope=runtime -DexcludeArtifactIds=commons-codec,commons-loggin,annotations,animal-sniffer-annotations,protobuf-java-util -Dsort=true | grep '\[INFO]    .*:.*:.*:.*:.*' >.new-list.txt
 
   # Compare two dependency lists
   msg "Comparing dependency lists..."
