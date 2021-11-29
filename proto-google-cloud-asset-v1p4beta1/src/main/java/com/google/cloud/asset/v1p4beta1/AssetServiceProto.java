@@ -90,8 +90,7 @@ public final class AssetServiceProto {
     java.lang.String[] descriptorData = {
       "\n"
           + "0google/cloud/asset/v1p4beta1/asset_service.proto\022\034google.cloud.asset.v1p4beta1"
-          + "\032\034google/api/annotations.proto\032\037google/a"
-          + "pi/field_behavior.proto\032)google/cloud/asset/v1p4beta1/assets.proto\032\032google/iam/v1/policy.proto\032#google/longrunning/operations.proto\032\036google/protobuf/duration.proto\032\027google/api/client.proto\"\376\003\n"
+          + "\032\034google/api/annotations.proto\032\037google/api/field_behavior.proto\032)google/cloud/asset/v1p4beta1/assets.proto\032\032google/iam/v1/policy.proto\032#google/longrunning/operations.proto\032\036google/protobuf/duration.proto\032\027google/api/client.proto\"\376\003\n"
           + "\026IamPolicyAnalysisQuery\022\023\n"
           + "\006parent\030\001 \001(\tB\003\340A\002\022e\n"
           + "\021resource_selector\030\002"
