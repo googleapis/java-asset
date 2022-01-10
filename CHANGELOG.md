@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.2.14](https://www.github.com/googleapis/java-asset/compare/v3.2.13...v3.2.14) (2022-01-10)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-resourcemanager to v1.2.1 ([#1068](https://www.github.com/googleapis/java-asset/issues/1068)) ([3a297b9](https://www.github.com/googleapis/java-asset/commit/3a297b94b69bbae7bd09ae0f488af831f430df9d))
+
 ### [3.2.13](https://www.github.com/googleapis/java-asset/compare/v3.2.12...v3.2.13) (2022-01-07)
 
 
