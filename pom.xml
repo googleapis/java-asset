@@ -146,6 +146,11 @@
         <artifactId>proto-google-cloud-os-config-v1</artifactId>
         <version>2.4.2</version>
       </dependency>
+      <dependency>
+        <groupId>io.perfmark</groupId>
+        <artifactId>perfmark-api</artifactId>
+        <version>0.25.0</version>
+      </dependency>
 
       <dependency>
         <groupId>junit</groupId>
