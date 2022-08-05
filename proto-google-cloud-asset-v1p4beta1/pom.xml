@@ -12,20 +12,6 @@
     <artifactId>google-cloud-asset-parent</artifactId>
     <version>3.4.2</version><!-- {x-version-update:google-cloud-asset:current} -->
   </parent>
-  <dependencies>
-    <dependency>
-      <groupId>com.google.protobuf</groupId>
-      <artifactId>protobuf-java</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.api.grpc</groupId>
-      <artifactId>proto-google-common-protos</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.google.api.grpc</groupId>
-      <artifactId>proto-google-iam-v1</artifactId>
-    </dependency>
-  </dependencies>
 
   <build>
     <plugins>
