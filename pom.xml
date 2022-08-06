@@ -65,6 +65,16 @@
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
+        <artifactId>proto-google-cloud-asset-v1p4beta1</artifactId>
+        <version>0.104.2</version><!-- {x-version-update:proto-google-cloud-asset-v1p4beta1:current} -->
+      </dependency>
+      <dependency>
+        <groupId>com.google.api.grpc</groupId>
+        <artifactId>grpc-google-cloud-asset-v1p4beta1</artifactId>
+        <version>0.104.2</version><!-- {x-version-update:grpc-google-cloud-asset-v1p4beta1:current} -->
+      </dependency>
+      <dependency>
+        <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-asset-v1p7beta1</artifactId>
         <version>3.4.2</version><!-- {x-version-update:proto-google-cloud-asset-v1p7beta1:current} -->
       </dependency>
@@ -191,11 +201,13 @@
     <module>grpc-google-cloud-asset-v1</module>
     <module>grpc-google-cloud-asset-v1p1beta1</module>
     <module>grpc-google-cloud-asset-v1p2beta1</module>
+    <module>grpc-google-cloud-asset-v1p4beta1</module>
     <module>grpc-google-cloud-asset-v1p5beta1</module>
     <module>grpc-google-cloud-asset-v1p7beta1</module>
     <module>proto-google-cloud-asset-v1</module>
     <module>proto-google-cloud-asset-v1p1beta1</module>
     <module>proto-google-cloud-asset-v1p2beta1</module>
+    <module>proto-google-cloud-asset-v1p4beta1</module>
     <module>proto-google-cloud-asset-v1p5beta1</module>
     <module>proto-google-cloud-asset-v1p7beta1</module>
     <module>google-cloud-asset-bom</module>
