@@ -34,7 +34,7 @@ public class BatchGetEffectiveIamPolicy {
   private static final String projectId = System.getenv("GOOGLE_CLOUD_PROJECT");
   private static final String scope = "projects/" + projectId;
   private static final String[] resourceNames = {
-      "//cloudresourcemanager.googleapis.com/projects/" + projectId
+    "//cloudresourcemanager.googleapis.com/projects/" + projectId
   };
 
   private ByteArrayOutputStream bout;
