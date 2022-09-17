@@ -16,7 +16,7 @@
 
 package com.example.asset;
 
-// [START asset_quickstart_batch_get_effective_iam_policy]
+// [START asset_quickstart_batch_get_effective_iam_policies]
 // Imports the Google Cloud client library
 
 import com.google.api.gax.rpc.ApiException;
@@ -52,4 +52,4 @@ public class BatchGetEffectiveIamPolicyExample {
     }
   }
 }
-// [END asset_quickstart_batch_get_effective_iam_policy]
+// [END asset_quickstart_batch_get_effective_iam_policies]
