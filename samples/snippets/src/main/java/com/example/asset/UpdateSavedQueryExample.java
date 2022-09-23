@@ -24,18 +24,18 @@ import com.google.protobuf.FieldMask;
 
 public class UpdateSavedQueryExample {
 
-  // Update a saved_query
-  public static void updateSavedQuery(String saved_queryName, String description) throws Exception {
-    // String saved_queryName = "MY_SAVED_QUERY_NAME"
+  // Update a savedQuery
+  public static void updateSavedQuery(String savedQueryName, String description) throws Exception {
+    // String savedQueryName = "MY_SAVED_QUERY_NAME"
     // String description = "SOME_DESCRIPTION"
-    SavedQuery saved_query =
+    SavedQuery savedQuery =
         SavedQuery.newBuilder()
-            .setName(saved_queryName)
+            .setName(savedQueryName)
             .setDescription(description)
             .build();
     UpdateSavedQueryRequest request =
         UpdateSavedQueryRequest.newBuilder()
-            .setSavedQuery(saved_query)
+            .setSavedQuery(savedQuery)
             .setUpdateMask(
                 FieldMask.newBuilder()
                     .addPaths("description")

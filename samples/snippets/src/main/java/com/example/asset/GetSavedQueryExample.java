@@ -22,16 +22,16 @@ import com.google.cloud.asset.v1.SavedQuery;
 
 public class GetSavedQueryExample {
 
-  // Get a saved_query with full saved_query name
-  public static void getSavedQuery(String saved_queryName) throws Exception {
-    // String saved_queryName = "MY_SAVED_QUERY_NAME"
+  // Get a savedQuery with full savedQuery name
+  public static void getSavedQuery(String savedQueryName) throws Exception {
+    // String savedQueryName = "MY_SAVED_QUERY_NAME"
 
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests. After completing all of your requests, call
     // the "close" method on the client to safely clean up any remaining background resources.
     try (AssetServiceClient client = AssetServiceClient.create()) {
-      SavedQuery saved_query = client.getSavedQuery(saved_queryName);
-      System.out.println("Get a saved_query: " + saved_queryName);
+      SavedQuery savedQuery = client.getSavedQuery(savedQueryName);
+      System.out.println("Get a savedQuery: " + savedQueryName);
     } catch (Exception e) {
       System.out.println("Error during GetSavedQuery: \n" + e.toString());
     }

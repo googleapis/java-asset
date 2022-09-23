@@ -19,22 +19,22 @@ package com.example.asset;
 // [START asset_quickstart_create_saved_query]
 import com.google.cloud.asset.v1.AssetServiceClient;
 import com.google.cloud.asset.v1.CreateSavedQueryRequest;
-import com.google.cloud.asset.v1.SavedQuery;
 import com.google.cloud.asset.v1.IamPolicyAnalysisQuery;
 import com.google.cloud.asset.v1.ProjectName;
+import com.google.cloud.asset.v1.SavedQuery;
 import java.io.IOException;
 import java.util.Arrays;
 
 public class CreateSavedQueryExample {
-  // Create a saved_query
+  // Create a savedQuery
   public static void createSavedQuery(
-      String saved_queryId, String description, String projectId)
+      String savedQueryId, String description, String projectId)
       throws IOException, IllegalArgumentException {
     // String SavedQueryId = "MY_SAVED_QUERY_ID"
     // String description = "SOME_DESCRIPTION"
     // String projectID = "MY_PROJECT_ID"
     String scope = "organizations/474566717491"; // Change to your org, folder. or project
-    SavedQuery saved_query =
+    SavedQuery savedQuery =
         SavedQuery.newBuilder()
             .setDescription(description)
             .setContent(
@@ -49,8 +49,8 @@ public class CreateSavedQueryExample {
     CreateSavedQueryRequest request =
         CreateSavedQueryRequest.newBuilder()
             .setParent(String.format(ProjectName.of(projectId).toString()))
-            .setSavedQueryId(saved_queryId)
-            .setSavedQuery(saved_query)
+            .setSavedQueryId(savedQueryId)
+            .setSavedQuery(savedQuery)
             .build();
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests. After completing all of your requests, call

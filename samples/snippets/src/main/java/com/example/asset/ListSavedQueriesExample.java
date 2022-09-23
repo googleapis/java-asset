@@ -30,7 +30,8 @@ public class ListSavedQueriesExample {
     // once, and can be reused for multiple requests. After completing all of your requests, call
     // the "close" method on the client to safely clean up any remaining background resources.
     try (AssetServiceClient client = AssetServiceClient.create()) {
-      ListSavedQueriesPagedResponse response = client.listSavedQueries(ProjectName.of(projectId).toString());
+      ListSavedQueriesPagedResponse response = client.listSavedQueries(ProjectName.of(
+          projectId).toString());
       System.out.println("Listed savedQueries under: " + projectId);
     } catch (Exception e) {
       System.out.println("Error during ListSavedQueries: \n" + e.toString());

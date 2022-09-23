@@ -34,15 +34,16 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.junit.runners.MethodSorters;
 
-/** Tests for real time saved_query sample. */
+/** Tests for real time savedQuery sample. */
 @RunWith(JUnit4.class)
 @SuppressWarnings("checkstyle:abbreviationaswordinname")
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SavedQuery {
-  private static final String saved_queryId = UUID.randomUUID().toString();
+  private static final String savedQueryId = UUID.randomUUID().toString();
   private static final String projectId = System.getenv("GOOGLE_CLOUD_PROJECT");
   private final String projectNumber = getProjectNumber(projectId);
-  private final String saved_queryName = String.format("projects/%s/savedQueries/%s", projectNumber, saved_queryId);
+  private final String savedQueryName = String.format("projects/%s/savedQueries/%s",
+      projectNumber, savedQueryId);
   private ByteArrayOutputStream bout;
   private PrintStream out;
   private PrintStream originalPrintStream;
@@ -71,16 +72,16 @@ public class SavedQuery {
   @Test
   public void test1CreateSavedQueryExample() throws Exception {
     CreateSavedQueryExample.createSavedQuery(
-        saved_queryId, "saved_query_foo", projectId);
+        savedQueryId, "saved_query_foo", projectId);
     String got = bout.toString();
-    assertThat(got).contains("SavedQuery created successfully: " + saved_queryName);
+    assertThat(got).contains("SavedQuery created successfully: " + savedQueryName);
   }
 
   @Test
   public void test2GetSavedQueryExample() throws Exception {
-    GetSavedQueryExample.getSavedQuery(saved_queryName);
+    GetSavedQueryExample.getSavedQuery(savedQueryName);
     String got = bout.toString();
-    assertThat(got).contains("Get a saved_query: " + saved_queryName);
+    assertThat(got).contains("Get a savedQuery: " + savedQueryName);
   }
 
   @Test
@@ -92,14 +93,14 @@ public class SavedQuery {
 
   @Test
   public void test4UpdateSavedQueryExample() throws Exception {
-    UpdateSavedQueryExample.updateSavedQuery(saved_queryName, "New Description");
+    UpdateSavedQueryExample.updateSavedQuery(savedQueryName, "New Description");
     String got = bout.toString();
-    assertThat(got).contains("SavedQuery updated successfully: " + saved_queryName);
+    assertThat(got).contains("SavedQuery updated successfully: " + savedQueryName);
   }
 
   @Test
   public void test5DeleteSavedQueryExample() throws Exception {
-    DeleteSavedQueryExample.deleteSavedQuery(saved_queryName);
+    DeleteSavedQueryExample.deleteSavedQuery(savedQueryName);
     String got = bout.toString();
     assertThat(got).contains("SavedQuery deleted");
   }
