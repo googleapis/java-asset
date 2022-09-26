@@ -26,7 +26,7 @@ public class UpdateSavedQueryExample {
 
   // Update a savedQuery
   public static void updateSavedQuery(String savedQueryName, String description) throws Exception {
-    // String savedQueryName = "MY_SAVED_QUERY_NAME"
+    // String savedQueryName = "SAVED_QUERY_NAME"
     // String description = "SOME_DESCRIPTION"
     SavedQuery savedQuery =
         SavedQuery.newBuilder()
