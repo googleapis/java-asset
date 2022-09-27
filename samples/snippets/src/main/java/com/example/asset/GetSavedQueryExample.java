@@ -24,7 +24,7 @@ public class GetSavedQueryExample {
 
   // Get a savedQuery with full savedQuery name
   public static void getSavedQuery(String savedQueryName) throws Exception {
-    // String savedQueryName = "SAVED_QUERY_NAME"
+    // String savedQueryName = "MY_SAVED_QUERY_NAME"
 
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests. After completing all of your requests, call
