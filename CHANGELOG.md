@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.7.1](https://github.com/googleapis/java-asset/compare/v3.7.0...v3.7.1) (2022-10-07)
+
+
+### Dependencies
+
+* Update dependency com.google.api.grpc:proto-google-cloud-orgpolicy-v1 to v2.3.6 ([#1390](https://github.com/googleapis/java-asset/issues/1390)) ([8cb9e0c](https://github.com/googleapis/java-asset/commit/8cb9e0c38af00818457325e8ed5432f5a884ad1f))
+* Update dependency com.google.api.grpc:proto-google-cloud-os-config-v1 to v2.5.6 ([#1382](https://github.com/googleapis/java-asset/issues/1382)) ([aeb9058](https://github.com/googleapis/java-asset/commit/aeb9058e3ce09aedc3257ea58777fc808660f2a4))
+* Update dependency com.google.api.grpc:proto-google-cloud-pubsub-v1 to v1.102.20 ([#1384](https://github.com/googleapis/java-asset/issues/1384)) ([576c983](https://github.com/googleapis/java-asset/commit/576c9837b9d88518613153870ece72b8ec8dda6b))
+* Update dependency com.google.api.grpc:proto-google-identity-accesscontextmanager-v1 to v1.4.5 ([#1383](https://github.com/googleapis/java-asset/issues/1383)) ([f54db0e](https://github.com/googleapis/java-asset/commit/f54db0edb13400c8dd44c4a5f3b31b21c685c36d))
+* Update dependency com.google.cloud:google-cloud-bigquery to v2.17.0 ([#1386](https://github.com/googleapis/java-asset/issues/1386)) ([6268220](https://github.com/googleapis/java-asset/commit/62682202bf47dbea3af3c6e00c6d79f0da57af9f))
+* Update dependency com.google.cloud:google-cloud-core to v2.8.20 ([#1380](https://github.com/googleapis/java-asset/issues/1380)) ([d7ba867](https://github.com/googleapis/java-asset/commit/d7ba8675bdc2bea16c89b5c7f0f81556c74ffa52))
+* Update dependency com.google.cloud:google-cloud-pubsub to v1.120.20 ([#1385](https://github.com/googleapis/java-asset/issues/1385)) ([2731215](https://github.com/googleapis/java-asset/commit/27312152c2e3ef3c87e1efecfa55ba953f178cb4))
+* Update dependency com.google.cloud:google-cloud-resourcemanager to v1.5.6 ([#1391](https://github.com/googleapis/java-asset/issues/1391)) ([9872891](https://github.com/googleapis/java-asset/commit/987289122d4e0fddbba60372bcf32f77aa9b4151))
+* Update dependency com.google.cloud:google-cloud-storage to v2.13.0 ([#1392](https://github.com/googleapis/java-asset/issues/1392)) ([d3201ca](https://github.com/googleapis/java-asset/commit/d3201ca2abeb26d45d014b94e93ad084d891a137))
+
 ## [3.7.0](https://github.com/googleapis/java-asset/compare/v3.6.0...v3.7.0) (2022-10-03)
 
 
