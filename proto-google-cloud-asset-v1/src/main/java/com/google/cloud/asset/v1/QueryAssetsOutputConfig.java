@@ -74,8 +74,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The BigQuery dataset where the query results will be saved. It
-     * has the format of "projects/{projectId}/datasets/{datasetId}".
+     * Required. The BigQuery dataset where the query results will be saved. It has the
+     * format of "projects/{projectId}/datasets/{datasetId}".
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -87,8 +87,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The BigQuery dataset where the query results will be saved. It
-     * has the format of "projects/{projectId}/datasets/{datasetId}".
+     * Required. The BigQuery dataset where the query results will be saved. It has the
+     * format of "projects/{projectId}/datasets/{datasetId}".
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -101,9 +101,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The BigQuery table where the query results will be saved. If
-     * this table does not exist, a new table with the given name will be
-     * created.
+     * Required. The BigQuery table where the query results will be saved. If this table
+     * does not exist, a new table with the given name will be created.
      * </pre>
      *
      * <code>string table = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -115,9 +114,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The BigQuery table where the query results will be saved. If
-     * this table does not exist, a new table with the given name will be
-     * created.
+     * Required. The BigQuery table where the query results will be saved. If this table
+     * does not exist, a new table with the given name will be created.
      * </pre>
      *
      * <code>string table = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -136,8 +134,9 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      * overwrites the entire table or all the partitions data.
      * * WRITE_APPEND: If the table or partition already exists, BigQuery
      * appends the data to the table or the latest partition.
-     * * WRITE_EMPTY: If the table already exists and contains data, an error is
-     * returned.
+     * * WRITE_EMPTY: If the table already exists and contains data, a
+     * 'duplicate' error is returned in the job result.
+     * The default value is WRITE_EMPTY.
      * </pre>
      *
      * <code>string write_disposition = 3;</code>
@@ -155,8 +154,9 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      * overwrites the entire table or all the partitions data.
      * * WRITE_APPEND: If the table or partition already exists, BigQuery
      * appends the data to the table or the latest partition.
-     * * WRITE_EMPTY: If the table already exists and contains data, an error is
-     * returned.
+     * * WRITE_EMPTY: If the table already exists and contains data, a
+     * 'duplicate' error is returned in the job result.
+     * The default value is WRITE_EMPTY.
      * </pre>
      *
      * <code>string write_disposition = 3;</code>
@@ -222,8 +222,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The BigQuery dataset where the query results will be saved. It
-     * has the format of "projects/{projectId}/datasets/{datasetId}".
+     * Required. The BigQuery dataset where the query results will be saved. It has the
+     * format of "projects/{projectId}/datasets/{datasetId}".
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -246,8 +246,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The BigQuery dataset where the query results will be saved. It
-     * has the format of "projects/{projectId}/datasets/{datasetId}".
+     * Required. The BigQuery dataset where the query results will be saved. It has the
+     * format of "projects/{projectId}/datasets/{datasetId}".
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -273,9 +273,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The BigQuery table where the query results will be saved. If
-     * this table does not exist, a new table with the given name will be
-     * created.
+     * Required. The BigQuery table where the query results will be saved. If this table
+     * does not exist, a new table with the given name will be created.
      * </pre>
      *
      * <code>string table = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -298,9 +297,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      *
      *
      * <pre>
-     * Required. The BigQuery table where the query results will be saved. If
-     * this table does not exist, a new table with the given name will be
-     * created.
+     * Required. The BigQuery table where the query results will be saved. If this table
+     * does not exist, a new table with the given name will be created.
      * </pre>
      *
      * <code>string table = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -332,8 +330,9 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      * overwrites the entire table or all the partitions data.
      * * WRITE_APPEND: If the table or partition already exists, BigQuery
      * appends the data to the table or the latest partition.
-     * * WRITE_EMPTY: If the table already exists and contains data, an error is
-     * returned.
+     * * WRITE_EMPTY: If the table already exists and contains data, a
+     * 'duplicate' error is returned in the job result.
+     * The default value is WRITE_EMPTY.
      * </pre>
      *
      * <code>string write_disposition = 3;</code>
@@ -362,8 +361,9 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
      * overwrites the entire table or all the partitions data.
      * * WRITE_APPEND: If the table or partition already exists, BigQuery
      * appends the data to the table or the latest partition.
-     * * WRITE_EMPTY: If the table already exists and contains data, an error is
-     * returned.
+     * * WRITE_EMPTY: If the table already exists and contains data, a
+     * 'duplicate' error is returned in the job result.
+     * The default value is WRITE_EMPTY.
      * </pre>
      *
      * <code>string write_disposition = 3;</code>
@@ -777,8 +777,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery dataset where the query results will be saved. It
-       * has the format of "projects/{projectId}/datasets/{datasetId}".
+       * Required. The BigQuery dataset where the query results will be saved. It has the
+       * format of "projects/{projectId}/datasets/{datasetId}".
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -800,8 +800,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery dataset where the query results will be saved. It
-       * has the format of "projects/{projectId}/datasets/{datasetId}".
+       * Required. The BigQuery dataset where the query results will be saved. It has the
+       * format of "projects/{projectId}/datasets/{datasetId}".
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -823,8 +823,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery dataset where the query results will be saved. It
-       * has the format of "projects/{projectId}/datasets/{datasetId}".
+       * Required. The BigQuery dataset where the query results will be saved. It has the
+       * format of "projects/{projectId}/datasets/{datasetId}".
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -845,8 +845,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery dataset where the query results will be saved. It
-       * has the format of "projects/{projectId}/datasets/{datasetId}".
+       * Required. The BigQuery dataset where the query results will be saved. It has the
+       * format of "projects/{projectId}/datasets/{datasetId}".
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -863,8 +863,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery dataset where the query results will be saved. It
-       * has the format of "projects/{projectId}/datasets/{datasetId}".
+       * Required. The BigQuery dataset where the query results will be saved. It has the
+       * format of "projects/{projectId}/datasets/{datasetId}".
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -888,9 +888,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery table where the query results will be saved. If
-       * this table does not exist, a new table with the given name will be
-       * created.
+       * Required. The BigQuery table where the query results will be saved. If this table
+       * does not exist, a new table with the given name will be created.
        * </pre>
        *
        * <code>string table = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -912,9 +911,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery table where the query results will be saved. If
-       * this table does not exist, a new table with the given name will be
-       * created.
+       * Required. The BigQuery table where the query results will be saved. If this table
+       * does not exist, a new table with the given name will be created.
        * </pre>
        *
        * <code>string table = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -936,9 +934,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery table where the query results will be saved. If
-       * this table does not exist, a new table with the given name will be
-       * created.
+       * Required. The BigQuery table where the query results will be saved. If this table
+       * does not exist, a new table with the given name will be created.
        * </pre>
        *
        * <code>string table = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -959,9 +956,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery table where the query results will be saved. If
-       * this table does not exist, a new table with the given name will be
-       * created.
+       * Required. The BigQuery table where the query results will be saved. If this table
+       * does not exist, a new table with the given name will be created.
        * </pre>
        *
        * <code>string table = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -978,9 +974,8 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        *
        *
        * <pre>
-       * Required. The BigQuery table where the query results will be saved. If
-       * this table does not exist, a new table with the given name will be
-       * created.
+       * Required. The BigQuery table where the query results will be saved. If this table
+       * does not exist, a new table with the given name will be created.
        * </pre>
        *
        * <code>string table = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1010,8 +1005,9 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery
        * appends the data to the table or the latest partition.
-       * * WRITE_EMPTY: If the table already exists and contains data, an error is
-       * returned.
+       * * WRITE_EMPTY: If the table already exists and contains data, a
+       * 'duplicate' error is returned in the job result.
+       * The default value is WRITE_EMPTY.
        * </pre>
        *
        * <code>string write_disposition = 3;</code>
@@ -1039,8 +1035,9 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery
        * appends the data to the table or the latest partition.
-       * * WRITE_EMPTY: If the table already exists and contains data, an error is
-       * returned.
+       * * WRITE_EMPTY: If the table already exists and contains data, a
+       * 'duplicate' error is returned in the job result.
+       * The default value is WRITE_EMPTY.
        * </pre>
        *
        * <code>string write_disposition = 3;</code>
@@ -1068,8 +1065,9 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery
        * appends the data to the table or the latest partition.
-       * * WRITE_EMPTY: If the table already exists and contains data, an error is
-       * returned.
+       * * WRITE_EMPTY: If the table already exists and contains data, a
+       * 'duplicate' error is returned in the job result.
+       * The default value is WRITE_EMPTY.
        * </pre>
        *
        * <code>string write_disposition = 3;</code>
@@ -1096,8 +1094,9 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery
        * appends the data to the table or the latest partition.
-       * * WRITE_EMPTY: If the table already exists and contains data, an error is
-       * returned.
+       * * WRITE_EMPTY: If the table already exists and contains data, a
+       * 'duplicate' error is returned in the job result.
+       * The default value is WRITE_EMPTY.
        * </pre>
        *
        * <code>string write_disposition = 3;</code>
@@ -1120,8 +1119,9 @@ public final class QueryAssetsOutputConfig extends com.google.protobuf.Generated
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery
        * appends the data to the table or the latest partition.
-       * * WRITE_EMPTY: If the table already exists and contains data, an error is
-       * returned.
+       * * WRITE_EMPTY: If the table already exists and contains data, a
+       * 'duplicate' error is returned in the job result.
+       * The default value is WRITE_EMPTY.
        * </pre>
        *
        * <code>string write_disposition = 3;</code>

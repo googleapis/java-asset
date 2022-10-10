@@ -74,8 +74,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The uri of the Cloud Storage object. It's the same uri that is
-     * used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+     * Required. The uri of the Cloud Storage object. It's the same uri that is used by
+     * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
      * Editing Object
      * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
      * for more information.
@@ -93,8 +93,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The uri of the Cloud Storage object. It's the same uri that is
-     * used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+     * Required. The uri of the Cloud Storage object. It's the same uri that is used by
+     * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
      * Editing Object
      * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
      * for more information.
@@ -164,8 +164,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The uri of the Cloud Storage object. It's the same uri that is
-     * used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+     * Required. The uri of the Cloud Storage object. It's the same uri that is used by
+     * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
      * Editing Object
      * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
      * for more information.
@@ -194,8 +194,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The uri of the Cloud Storage object. It's the same uri that is
-     * used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+     * Required. The uri of the Cloud Storage object. It's the same uri that is used by
+     * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
      * Editing Object
      * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
      * for more information.
@@ -572,8 +572,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The uri of the Cloud Storage object. It's the same uri that is
-       * used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+       * Required. The uri of the Cloud Storage object. It's the same uri that is used by
+       * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
        * Editing Object
        * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
        * for more information.
@@ -601,8 +601,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The uri of the Cloud Storage object. It's the same uri that is
-       * used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+       * Required. The uri of the Cloud Storage object. It's the same uri that is used by
+       * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
        * Editing Object
        * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
        * for more information.
@@ -630,8 +630,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The uri of the Cloud Storage object. It's the same uri that is
-       * used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+       * Required. The uri of the Cloud Storage object. It's the same uri that is used by
+       * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
        * Editing Object
        * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
        * for more information.
@@ -658,8 +658,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The uri of the Cloud Storage object. It's the same uri that is
-       * used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+       * Required. The uri of the Cloud Storage object. It's the same uri that is used by
+       * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
        * Editing Object
        * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
        * for more information.
@@ -682,8 +682,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The uri of the Cloud Storage object. It's the same uri that is
-       * used by gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
+       * Required. The uri of the Cloud Storage object. It's the same uri that is used by
+       * gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
        * Editing Object
        * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
        * for more information.
@@ -785,10 +785,9 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The BigQuery dataset in format
-     * "projects/projectId/datasets/datasetId", to which the analysis results
-     * should be exported. If this dataset does not exist, the export call will
-     * return an INVALID_ARGUMENT error.
+     * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+     * to which the analysis results should be exported. If this dataset does
+     * not exist, the export call will return an INVALID_ARGUMENT error.
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -800,10 +799,9 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The BigQuery dataset in format
-     * "projects/projectId/datasets/datasetId", to which the analysis results
-     * should be exported. If this dataset does not exist, the export call will
-     * return an INVALID_ARGUMENT error.
+     * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+     * to which the analysis results should be exported. If this dataset does
+     * not exist, the export call will return an INVALID_ARGUMENT error.
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -816,9 +814,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The prefix of the BigQuery tables to which the analysis results
-     * will be written. Tables will be created based on this table_prefix if not
-     * exist:
+     * Required. The prefix of the BigQuery tables to which the analysis results will be
+     * written. Tables will be created based on this table_prefix if not exist:
      * * &lt;table_prefix&gt;_analysis table will contain export operation's metadata.
      * * &lt;table_prefix&gt;_analysis_result will contain all the
      *   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -835,9 +832,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The prefix of the BigQuery tables to which the analysis results
-     * will be written. Tables will be created based on this table_prefix if not
-     * exist:
+     * Required. The prefix of the BigQuery tables to which the analysis results will be
+     * written. Tables will be created based on this table_prefix if not exist:
      * * &lt;table_prefix&gt;_analysis table will contain export operation's metadata.
      * * &lt;table_prefix&gt;_analysis_result will contain all the
      *   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -885,8 +881,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Optional. Specifies the action that occurs if the destination table or
-     * partition already exists. The following values are supported:
+     * Optional. Specifies the action that occurs if the destination table or partition
+     * already exists. The following values are supported:
      * * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
      * overwrites the entire table or all the partitions data.
      * * WRITE_APPEND: If the table or partition already exists, BigQuery
@@ -907,8 +903,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Optional. Specifies the action that occurs if the destination table or
-     * partition already exists. The following values are supported:
+     * Optional. Specifies the action that occurs if the destination table or partition
+     * already exists. The following values are supported:
      * * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
      * overwrites the entire table or all the partitions data.
      * * WRITE_APPEND: If the table or partition already exists, BigQuery
@@ -1133,10 +1129,9 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The BigQuery dataset in format
-     * "projects/projectId/datasets/datasetId", to which the analysis results
-     * should be exported. If this dataset does not exist, the export call will
-     * return an INVALID_ARGUMENT error.
+     * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+     * to which the analysis results should be exported. If this dataset does
+     * not exist, the export call will return an INVALID_ARGUMENT error.
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1159,10 +1154,9 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The BigQuery dataset in format
-     * "projects/projectId/datasets/datasetId", to which the analysis results
-     * should be exported. If this dataset does not exist, the export call will
-     * return an INVALID_ARGUMENT error.
+     * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+     * to which the analysis results should be exported. If this dataset does
+     * not exist, the export call will return an INVALID_ARGUMENT error.
      * </pre>
      *
      * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1188,9 +1182,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The prefix of the BigQuery tables to which the analysis results
-     * will be written. Tables will be created based on this table_prefix if not
-     * exist:
+     * Required. The prefix of the BigQuery tables to which the analysis results will be
+     * written. Tables will be created based on this table_prefix if not exist:
      * * &lt;table_prefix&gt;_analysis table will contain export operation's metadata.
      * * &lt;table_prefix&gt;_analysis_result will contain all the
      *   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -1218,9 +1211,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Required. The prefix of the BigQuery tables to which the analysis results
-     * will be written. Tables will be created based on this table_prefix if not
-     * exist:
+     * Required. The prefix of the BigQuery tables to which the analysis results will be
+     * written. Tables will be created based on this table_prefix if not exist:
      * * &lt;table_prefix&gt;_analysis table will contain export operation's metadata.
      * * &lt;table_prefix&gt;_analysis_result will contain all the
      *   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -1297,8 +1289,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Optional. Specifies the action that occurs if the destination table or
-     * partition already exists. The following values are supported:
+     * Optional. Specifies the action that occurs if the destination table or partition
+     * already exists. The following values are supported:
      * * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
      * overwrites the entire table or all the partitions data.
      * * WRITE_APPEND: If the table or partition already exists, BigQuery
@@ -1330,8 +1322,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
      *
      *
      * <pre>
-     * Optional. Specifies the action that occurs if the destination table or
-     * partition already exists. The following values are supported:
+     * Optional. Specifies the action that occurs if the destination table or partition
+     * already exists. The following values are supported:
      * * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
      * overwrites the entire table or all the partitions data.
      * * WRITE_APPEND: If the table or partition already exists, BigQuery
@@ -1789,10 +1781,9 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The BigQuery dataset in format
-       * "projects/projectId/datasets/datasetId", to which the analysis results
-       * should be exported. If this dataset does not exist, the export call will
-       * return an INVALID_ARGUMENT error.
+       * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+       * to which the analysis results should be exported. If this dataset does
+       * not exist, the export call will return an INVALID_ARGUMENT error.
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1814,10 +1805,9 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The BigQuery dataset in format
-       * "projects/projectId/datasets/datasetId", to which the analysis results
-       * should be exported. If this dataset does not exist, the export call will
-       * return an INVALID_ARGUMENT error.
+       * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+       * to which the analysis results should be exported. If this dataset does
+       * not exist, the export call will return an INVALID_ARGUMENT error.
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1839,10 +1829,9 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The BigQuery dataset in format
-       * "projects/projectId/datasets/datasetId", to which the analysis results
-       * should be exported. If this dataset does not exist, the export call will
-       * return an INVALID_ARGUMENT error.
+       * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+       * to which the analysis results should be exported. If this dataset does
+       * not exist, the export call will return an INVALID_ARGUMENT error.
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1863,10 +1852,9 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The BigQuery dataset in format
-       * "projects/projectId/datasets/datasetId", to which the analysis results
-       * should be exported. If this dataset does not exist, the export call will
-       * return an INVALID_ARGUMENT error.
+       * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+       * to which the analysis results should be exported. If this dataset does
+       * not exist, the export call will return an INVALID_ARGUMENT error.
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1883,10 +1871,9 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The BigQuery dataset in format
-       * "projects/projectId/datasets/datasetId", to which the analysis results
-       * should be exported. If this dataset does not exist, the export call will
-       * return an INVALID_ARGUMENT error.
+       * Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+       * to which the analysis results should be exported. If this dataset does
+       * not exist, the export call will return an INVALID_ARGUMENT error.
        * </pre>
        *
        * <code>string dataset = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1910,9 +1897,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The prefix of the BigQuery tables to which the analysis results
-       * will be written. Tables will be created based on this table_prefix if not
-       * exist:
+       * Required. The prefix of the BigQuery tables to which the analysis results will be
+       * written. Tables will be created based on this table_prefix if not exist:
        * * &lt;table_prefix&gt;_analysis table will contain export operation's metadata.
        * * &lt;table_prefix&gt;_analysis_result will contain all the
        *   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -1939,9 +1925,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The prefix of the BigQuery tables to which the analysis results
-       * will be written. Tables will be created based on this table_prefix if not
-       * exist:
+       * Required. The prefix of the BigQuery tables to which the analysis results will be
+       * written. Tables will be created based on this table_prefix if not exist:
        * * &lt;table_prefix&gt;_analysis table will contain export operation's metadata.
        * * &lt;table_prefix&gt;_analysis_result will contain all the
        *   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -1968,9 +1953,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The prefix of the BigQuery tables to which the analysis results
-       * will be written. Tables will be created based on this table_prefix if not
-       * exist:
+       * Required. The prefix of the BigQuery tables to which the analysis results will be
+       * written. Tables will be created based on this table_prefix if not exist:
        * * &lt;table_prefix&gt;_analysis table will contain export operation's metadata.
        * * &lt;table_prefix&gt;_analysis_result will contain all the
        *   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -1996,9 +1980,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The prefix of the BigQuery tables to which the analysis results
-       * will be written. Tables will be created based on this table_prefix if not
-       * exist:
+       * Required. The prefix of the BigQuery tables to which the analysis results will be
+       * written. Tables will be created based on this table_prefix if not exist:
        * * &lt;table_prefix&gt;_analysis table will contain export operation's metadata.
        * * &lt;table_prefix&gt;_analysis_result will contain all the
        *   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -2020,9 +2003,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Required. The prefix of the BigQuery tables to which the analysis results
-       * will be written. Tables will be created based on this table_prefix if not
-       * exist:
+       * Required. The prefix of the BigQuery tables to which the analysis results will be
+       * written. Tables will be created based on this table_prefix if not exist:
        * * &lt;table_prefix&gt;_analysis table will contain export operation's metadata.
        * * &lt;table_prefix&gt;_analysis_result will contain all the
        *   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
@@ -2161,8 +2143,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Optional. Specifies the action that occurs if the destination table or
-       * partition already exists. The following values are supported:
+       * Optional. Specifies the action that occurs if the destination table or partition
+       * already exists. The following values are supported:
        * * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery
@@ -2193,8 +2175,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Optional. Specifies the action that occurs if the destination table or
-       * partition already exists. The following values are supported:
+       * Optional. Specifies the action that occurs if the destination table or partition
+       * already exists. The following values are supported:
        * * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery
@@ -2225,8 +2207,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Optional. Specifies the action that occurs if the destination table or
-       * partition already exists. The following values are supported:
+       * Optional. Specifies the action that occurs if the destination table or partition
+       * already exists. The following values are supported:
        * * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery
@@ -2256,8 +2238,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Optional. Specifies the action that occurs if the destination table or
-       * partition already exists. The following values are supported:
+       * Optional. Specifies the action that occurs if the destination table or partition
+       * already exists. The following values are supported:
        * * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery
@@ -2283,8 +2265,8 @@ public final class IamPolicyAnalysisOutputConfig extends com.google.protobuf.Gen
        *
        *
        * <pre>
-       * Optional. Specifies the action that occurs if the destination table or
-       * partition already exists. The following values are supported:
+       * Optional. Specifies the action that occurs if the destination table or partition
+       * already exists. The following values are supported:
        * * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
        * overwrites the entire table or all the partitions data.
        * * WRITE_APPEND: If the table or partition already exists, BigQuery

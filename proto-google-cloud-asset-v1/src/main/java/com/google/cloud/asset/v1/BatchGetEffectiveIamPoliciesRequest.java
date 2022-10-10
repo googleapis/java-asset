@@ -22,8 +22,7 @@ package com.google.cloud.asset.v1;
  *
  *
  * <pre>
- * A request message for
- * [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
+ * A request message for [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
  * </pre>
  *
  * Protobuf type {@code google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest}
@@ -403,8 +402,7 @@ public final class BatchGetEffectiveIamPoliciesRequest
    *
    *
    * <pre>
-   * A request message for
-   * [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
+   * A request message for [AssetService.BatchGetEffectiveIamPolicies][google.cloud.asset.v1.AssetService.BatchGetEffectiveIamPolicies].
    * </pre>
    *
    * Protobuf type {@code google.cloud.asset.v1.BatchGetEffectiveIamPoliciesRequest}

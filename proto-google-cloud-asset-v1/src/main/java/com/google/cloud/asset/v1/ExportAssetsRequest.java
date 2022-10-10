@@ -344,8 +344,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. Output configuration indicating where the results will be output
-   * to.
+   * Required. Output configuration indicating where the results will be output to.
    * </pre>
    *
    * <code>
@@ -362,8 +361,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. Output configuration indicating where the results will be output
-   * to.
+   * Required. Output configuration indicating where the results will be output to.
    * </pre>
    *
    * <code>
@@ -382,8 +380,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Required. Output configuration indicating where the results will be output
-   * to.
+   * Required. Output configuration indicating where the results will be output to.
    * </pre>
    *
    * <code>
@@ -1752,8 +1749,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. Output configuration indicating where the results will be output
-     * to.
+     * Required. Output configuration indicating where the results will be output to.
      * </pre>
      *
      * <code>
@@ -1769,8 +1765,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. Output configuration indicating where the results will be output
-     * to.
+     * Required. Output configuration indicating where the results will be output to.
      * </pre>
      *
      * <code>
@@ -1792,8 +1787,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. Output configuration indicating where the results will be output
-     * to.
+     * Required. Output configuration indicating where the results will be output to.
      * </pre>
      *
      * <code>
@@ -1817,8 +1811,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. Output configuration indicating where the results will be output
-     * to.
+     * Required. Output configuration indicating where the results will be output to.
      * </pre>
      *
      * <code>
@@ -1839,8 +1832,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. Output configuration indicating where the results will be output
-     * to.
+     * Required. Output configuration indicating where the results will be output to.
      * </pre>
      *
      * <code>
@@ -1868,8 +1860,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. Output configuration indicating where the results will be output
-     * to.
+     * Required. Output configuration indicating where the results will be output to.
      * </pre>
      *
      * <code>
@@ -1891,8 +1882,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. Output configuration indicating where the results will be output
-     * to.
+     * Required. Output configuration indicating where the results will be output to.
      * </pre>
      *
      * <code>
@@ -1908,8 +1898,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. Output configuration indicating where the results will be output
-     * to.
+     * Required. Output configuration indicating where the results will be output to.
      * </pre>
      *
      * <code>
@@ -1929,8 +1918,7 @@ public final class ExportAssetsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Required. Output configuration indicating where the results will be output
-     * to.
+     * Required. Output configuration indicating where the results will be output to.
      * </pre>
      *
      * <code>
