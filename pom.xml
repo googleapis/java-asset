@@ -66,7 +66,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-asset-v1p7beta1</artifactId>
-        <version>3.7.2-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-asset-v1p7beta1:current} -->
+        <version>3.8.0</version><!-- {x-version-update:proto-google-cloud-asset-v1p7beta1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
