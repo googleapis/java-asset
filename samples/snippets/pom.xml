@@ -23,7 +23,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <!-- [START cloudasset_install_with_bom] -->
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -80,5 +79,4 @@
     </dependency>
     <!-- [END_EXCLUDE] -->
   </dependencies>
-  <!-- [END cloudasset_install_with_bom] -->
 </project>
