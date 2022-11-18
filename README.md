@@ -9,6 +9,13 @@ Java idiomatic client for [Cloud Asset Inventory][product-docs].
 - [Client Library Documentation][javadocs]
 
 
+:bus: In October 2022, this library has moved to
+[google-cloud-java/java-asset](
+https://github.com/googleapis/google-cloud-java/tree/main/java-asset).
+This repository will be archived in the future.
+Future releases will appear in the new repository (https://github.com/googleapis/google-cloud-java/releases).
+The Maven artifact coordinates (`com.google.cloud:google-cloud-asset`) remain the same.
+
 ## Quickstart
 
 
