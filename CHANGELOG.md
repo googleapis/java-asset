@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.8.0](https://github.com/googleapis/java-asset/compare/v3.7.1...v3.8.0) (2023-05-08)
+
+
+### Features
+
+* Add a new searchable field kmsKeys ([#1393](https://github.com/googleapis/java-asset/issues/1393)) ([ca33b8a](https://github.com/googleapis/java-asset/commit/ca33b8a69524616531df651c9980b8ede0a2f80e))
+
 ## [3.7.1](https://github.com/googleapis/java-asset/compare/v3.7.0...v3.7.1) (2022-10-07)
 
 
