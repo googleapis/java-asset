@@ -24,6 +24,7 @@ s.remove_staging_dirs()
 java.common_templates(
     excludes=[
         ".kokoro/dependencies.sh",
-        ".kokoro/nightly/integration.cfg"
+        ".kokoro/nightly/integration.cfg",
+        ".github/release-trigger.yml"
     ]
 )
