@@ -50,20 +50,20 @@ If you are using Maven without BOM, add this to your dependencies:
 If you are using Gradle 5.x or later, add this to your dependencies:
 
 ```Groovy
-implementation platform('com.google.cloud:libraries-bom:26.11.0')
+implementation platform('com.google.cloud:libraries-bom:26.15.0')
 
 implementation 'com.google.cloud:google-cloud-asset'
 ```
 If you are using Gradle without BOM, add this to your dependencies:
 
 ```Groovy
-implementation 'com.google.cloud:google-cloud-asset:3.18.0'
+implementation 'com.google.cloud:google-cloud-asset:3.21.0'
 ```
 
 If you are using SBT, add this to your dependencies:
 
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-asset" % "3.18.0"
+libraryDependencies += "com.google.cloud" % "google-cloud-asset" % "3.21.0"
 ```
 
 ## Authentication
